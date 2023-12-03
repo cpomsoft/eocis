@@ -1,0 +1,263 @@
+#month_dropdown {
+    top: 25px;
+}
+#year_dropdown {
+    top: 25px;
+}
+#param_dropdown {
+    top: 25px;
+}
+.dropdown_top_txt {
+    top: 25px;
+}
+.button_top_txt {
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-family: Lato;
+}
+
+.button_view_txt {
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-family: Lato;
+}
+
+.latest_button_view_txt {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-family: Lato;
+    text-decoration: none;
+}
+.latest_button_view_txt a {
+    
+    text-decoration: none;
+}
+
+
+
+.download_button_top_txt {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-family: Lato;
+}
+
+.arrow_button {
+    /* Center the content */
+    align-items: center;
+    justify-content: center;
+    /* Spacing */
+    padding: 4px;
+    
+    /*background-color: rgb(238, 238, 238);*/
+    border: 0px;
+}
+.arrow_button_mobile {
+    /* Center the content */
+    align-items: center;
+    justify-content: center;
+    /*background-color: rgb(238, 238, 238);*/
+    border: 0px;
+}
+
+.arrow_button_left {
+    border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+    border-style: solid;
+    border-width: 8px 8px 8px 0px;
+    /* Size */
+    height: 0px;
+    width: 0px;
+}
+
+.arrow_button_right {
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
+    border-style: solid;
+    border-width: 8px 0px 8px 8px;
+
+    /* Size */
+    height: 0px;
+    width: 0px;
+}
+
+#image_div {
+    margin-top: 30px;
+}
+
+/* required to allow width sizing of dropdown menu items */
+.dropdown-menu {
+    min-width:inherit;
+     background-color: rgb(238,238,238);
+  }
+
+/* style of hover over of dropdown items */
+.dropdown-menu > a:hover {
+     background-color: white;
+     /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+}
+
+
+/* style of current active dropdown item */
+.dropdown-menu>.active{
+  background-color: rgb(208,208,208);
+  color: black;
+}
+
+/*---------------------------------*/
+/* class to style dropdown buttons */
+/*---------------------------------*/
+.ct_dropdown_button {
+    background-color: gainsboro;
+   font-family: Lato;
+   color: black;
+   font-size: 15px;
+   border: 0px solid rgb(12,3,51);
+ }
+ .ct_dropdown_button:hover {
+    background-color: darkgrey;
+   font-family: Lato;
+   color: black;
+   font-size: 15px;
+   /*border: 1px solid rgb(12,3,51);*/
+ }
+ .ct_dropdown_button:focus {
+    background-color: white;
+   font-family: Lato;
+   color: black;
+   font-size: 15px;
+   /*border: 1px solid rgb(12,3,51);*/
+ }
+
+ .image-with-shadow {
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  
+    /* You can customize the shadow further by adjusting the values in the box-shadow property */
+  }
+  
+  /* Optional: Add some padding to create space around the image */
+  .image-with-shadow {
+    padding: 10px;
+  }
+
+  #prod_col {
+    margin-bottom: 10px;
+    
+    border-style: solid;
+    border-width: 2px;
+    border-color:lavender;
+  }
+
+  .ts_pane {
+    margin-bottom: 10px;
+    
+    border-style: solid;
+    border-width: 2px;
+    border-color:lavender;
+
+    
+    box-sizing: border-box;
+  }
+
+  #prod_title {
+    text-align: center;
+    background-color: white;
+    margin-top: 5px;
+    border-color: darkgrey;
+    width: 92%;
+  }
+
+  #ts_title {
+    text-align: center;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    margin-left: 55px;
+    border-color: darkgrey;
+    width: 82%;
+  }
+
+  #volume_ts_div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 5px;
+
+  }
+
+  .expand-icon-container_ts {
+    position: relative;
+    top: 5px;
+  }
+
+  .expand-icon-container {
+    position: relative;
+    top: -15px;
+  }
+  
+  .expand-icon {
+    position: absolute;
+    top: 0px; /* Adjust the top distance as needed */
+    right: 10px; /* Adjust the right distance as needed */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    cursor: pointer;
+    color:darkgray;
+  }
+
+  .bg-dark a {
+    text-decoration: none;
+    color: inherit; /* This sets the link color to inherit from its parent */
+  }
+
+  .filename_txt {
+    font-size: 12px; /* Adjust the font size as needed */
+    color:dimgrey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+.third_height {
+    height: 33vh;
+    margin: 8px;
+}   
+.expanded_height {
+    height: 54vh;
+}   
+  
+.expand_ts {
+    position: absolute;
+    top: 165px;
+    left: 10px;
+    z-index: 99;
+    width: 95vw;
+    height: 60vh;
+    margin: 8px;
+    background-color: white;
+}  
+
+.volume_btn_wrapper {
+    position: relative;
+}
+
+.volume_btn {
+    position: absolute;
+    top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size:10px;
+}
+
+.hide {
+    display: none;
+}
+
+.report_txt {
+    margin-top: 15px;
+}
+  
