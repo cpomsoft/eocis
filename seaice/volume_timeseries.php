@@ -1,6 +1,13 @@
-<?php  $vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_volume.csv";
-console_log($vol_ts_file);
-$last_plot_month=3;
+<?php  
+$vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_volume.csv";
+if ($show_volume == 0) {
+    $vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_thickness.csv";
+}
+//console_log($vol_ts_file);
+//$last_plot_month=11 ;
+//console_log("$first_plot_year-$first_plot_month-01 $last_plot_year-$last_plot_month-31");
+//console_log($vol_ts_file);
+
 ?>
 <script>
         <?php if ($ts_exists) { ?>
@@ -18,17 +25,28 @@ $last_plot_month=3;
 
             <?php
 
-                $plot_y_title="Mean Sea Ice Volume (km3)";
+                if ($show_volume) {
+                    $plot_y_title="Mean Sea Ice Volume (km3)";
+                    $unpack_param='volume';
+                    $param_name='Volume';
+                    $param_units='km3';
+                } else {
+                    $plot_y_title="Mean Sea Ice Thickness (m)";
+                    $unpack_param='thickness';
+                    $param_name='Thickness';
+                    $param_units='m';
+                }
                 $plot_name = 'All files';
 
             ?>
 
+            
             var trace1 = {
                 type: "scatter",
                 mode: "lines+markers",
                 name: 'Winter',
                 x: unpack(rows, 'Date'),
-                y: unpack(rows, 'volume'),
+                y: unpack(rows, '<?php echo $unpack_param;?>'),
                 marker: {
                     color: '#5D5D99',
 
@@ -39,7 +57,7 @@ $last_plot_month=3;
                 },
                 connectgaps: false,
 
-                hovertemplate: '<i>Volume</i>: %{y:.1f} km3',
+                hovertemplate: '<i><?php echo $param_name;?></i>: %{y:.1f} <?php echo $param_units;?>',
             }
 
 
@@ -49,7 +67,7 @@ $last_plot_month=3;
                 mode: "lines",
                 name: 'Oct',
                 x: unpack(rows, 'Date'),
-                y: unpack(rows, 'October_volume'),
+                y: unpack(rows, 'October_<?php echo $unpack_param;?>'),
                  hoverinfo: 'skip',
 
                 line: {
@@ -65,7 +83,7 @@ $last_plot_month=3;
                 mode: "lines",
                 name: 'Jan',
                 x: unpack(rows, 'Date'),
-                y: unpack(rows, 'January_volume'),
+                y: unpack(rows, 'January_<?php echo $unpack_param;?>'),
                  hoverinfo: 'skip',
 
                 line: {
@@ -81,7 +99,7 @@ $last_plot_month=3;
                 mode: "lines",
                 name: 'Apr',
                 x: unpack(rows, 'Date'),
-                y: unpack(rows, 'April_volume'),
+                y: unpack(rows, 'April_<?php echo $unpack_param;?>'),
                 hoverinfo: 'skip',
 
                 line: {
@@ -96,6 +114,12 @@ $last_plot_month=3;
 
             var data = [trace1,trace2,trace3,trace4];
 
+            
+
+            var specifiedRangeStart = new Date(<?php print("$first_plot_year");?>, <?php print("$first_plot_month - 1");?>, 1);
+            var specifiedRangeEnd = new Date(<?php print("$last_plot_year");?>, <?php print("$last_plot_month - 1");?>, 31);
+
+
             /* with custom-range:     */
             var layout = {
 
@@ -103,9 +127,9 @@ $last_plot_month=3;
 
                 title: {
                     <?php if ($basin_number < 1) { ?>
-                    text:'Sea Ice Volume (All Arctic Regions)',
+                    text:'Mean Sea Ice <?php echo $param_name;?> (All Arctic Regions)',
                     <?php } else { ?>
-                    text:'Sea Ice Volume (<?php echo $basin_name; ?>)',
+                    text:'Mean Sea Ice <?php echo $param_name;?> (<?php echo $basin_name; ?>)',
                     <?php }?>
                     font: {
                         family: 'Arial, sans-serif',
@@ -114,7 +138,9 @@ $last_plot_month=3;
                 },
 
                 xaxis: { /* remove this to set plot range automatically */
-                    range: ['<?php print("$first_plot_year-$first_plot_month-01");?>','<?php print("$last_plot_year-$last_plot_month-31");?>'],
+                    /*range: ['<?php print("$first_plot_year-$first_plot_month-01");?>','<?php print("$last_plot_year-$last_plot_month-31");?>'],*/
+                    /*range: xaxisRange,*/
+                    range: [specifiedRangeStart.toISOString(), specifiedRangeEnd.toISOString()],
                     title: 'Month',
                     tickangle: -45,
                     type: 'date',

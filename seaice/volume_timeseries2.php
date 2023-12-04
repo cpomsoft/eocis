@@ -1,7 +1,14 @@
+<?php  
+$vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_volume.csv";
+if ($show_volume == 0) {
+    $vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_thickness.csv";
+}
+//console_log($vol_ts_file);
+?>
 <script>
         <?php if ($ts_exists) { ?>
 
-        Plotly.d3.csv("timeseries_data/<?php print "$mission/$farea/timeseries_".$basin_number."_volume.csv";?>", function(err, rows){
+            Plotly.d3.csv("<?php echo $vol_ts_file;?>", function(err, rows){
 
             function unpack(rows, key) {
                 return rows.map(function(row) { return row[key]; });
@@ -9,20 +16,30 @@
 
             /*Date,volume,January_volume,October_volume,April_volume
             */
-
             <?php
 
-                $plot_y_title="Mean Sea Ice Volume (km3)";
+                if ($show_volume) {
+                    $plot_y_title="Mean Sea Ice Volume (km3)";
+                    $unpack_param='volume';
+                    $param_name='Volume';
+                    $param_units='km3';
+                } else {
+                    $plot_y_title="Mean Sea Ice Thickness (m)";
+                    $unpack_param='thickness';
+                    $param_name='Thickness';
+                    $param_units='m';
+                }
                 $plot_name = 'All files';
 
             ?>
 
+            
             var trace2 = {
                 type: "scatter",
                 mode: "lines+markers",
                 name: 'Oct',
                 x: unpack(rows, 'Date'),
-                y: unpack(rows, 'October_volume'),
+                y: unpack(rows, 'October_<?php echo $unpack_param;?>'),
                 hoverinfo: 'skip',
                  
                 line: {
@@ -31,7 +48,7 @@
                     dash: 'dashdot',
                 },
                 connectgaps: true,
-                hovertemplate: '<i>Volume</i>: %{y:.1f} km3',
+                hovertemplate: '<i><?php echo $param_name;?></i>: %{y:.1f} <?php echo $param_units;?>',
             }
 
             var trace3 = {
@@ -39,7 +56,7 @@
                 mode: "lines+markers",
                 name: 'Jan',
                 x: unpack(rows, 'Date'),
-                y: unpack(rows, 'January_volume'),
+                y: unpack(rows, 'January_<?php echo $unpack_param;?>'),
                  hoverinfo: 'skip',
 
                 line: {
@@ -48,7 +65,7 @@
                     dash: 'dashdot',
                 },
                 connectgaps: true,
-                hovertemplate: '<i>Volume</i>: %{y:.1f} km3',
+                hovertemplate: '<i><?php echo $param_name;?></i>: %{y:.1f} <?php echo $param_units;?>',
             }
 
             var trace4 = {
@@ -56,7 +73,7 @@
                 mode: "lines+markers",
                 name: 'Apr',
                 x: unpack(rows, 'Date'),
-                y: unpack(rows, 'April_volume'),
+                y: unpack(rows, 'April_<?php echo $unpack_param;?>'),
                 hoverinfo: 'skip',
 
                 line: {
@@ -65,7 +82,7 @@
                     dash: 'dashdot',
                 },
                 connectgaps: true,
-                hovertemplate: '<i>Volume</i>: %{y:.1f} km3',
+                hovertemplate: '<i><?php echo $param_name;?></i>: %{y:.1f} <?php echo $param_units;?>',
             }
 
 
@@ -79,9 +96,9 @@
 
                 title: {
                     <?php if ($basin_number < 1) { ?>
-                    text:'Sea Ice Volume (All Arctic Regions)',
+                    text:'Mean Sea Ice <?php echo $param_name;?> (All Arctic Regions)',
                     <?php } else { ?>
-                    text:'Sea Ice Volume (<?php echo $basin_name; ?>)',
+                    text:'Mean Sea Ice <?php echo $param_name;?> (<?php echo $basin_name; ?>)',
                     <?php }?>
                     font: {
                         family: 'Arial, sans-serif',

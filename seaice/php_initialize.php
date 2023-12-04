@@ -16,6 +16,25 @@
 
         date_default_timezone_set("Europe/London");
 
+        // ----------------------------------------------------------------------------
+        //    show_volume  (to choose to display volume or thickness)
+        //    Allowed values: 0,1
+        // ----------------------------------------------------------------------------
+
+        $all_show_volume=array(0,1);
+
+        if(isset($_POST['show_volume'])) {
+            $show_volume=$_POST['show_volume'];
+        } else {
+            if(isset($_GET['show_volume'])) {
+                $show_volume=$_GET['show_volume'];
+            } else $show_volume=1;
+        }
+
+         if (!in_array($show_volume,$all_show_volume)) {
+            $show_volume=1;
+        }
+
         if(isset($_POST['expand_thick_image'])) {
             $expand_thick_image=$_POST['expand_thick_image'];
         } else {
@@ -186,6 +205,8 @@
         $first_plot_month=$last_month;
         $last_plot_year=$last_year;
         $last_plot_month=$last_month;
+
+
 
         console_log("first_plot_month=$first_plot_month");
         console_log("last_plot_month=$last_plot_month");

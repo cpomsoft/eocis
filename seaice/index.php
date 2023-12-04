@@ -133,13 +133,51 @@
           </a>
           <?php } ?>
         </div>
-          <div id="ts_title">Arctic Monthly Sea Ice <b>Volume</b> - Last 2 years</div>
-          <p class="text-muted text-center"><small>Sea ice volume grows each Arctic winter season from October to April</small></p>
+
+        <div class="switch-container">
+
+          <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
+          method="post" action="index.php?
+          <?php print "year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2";
+                print "&show_volume="; if ($show_volume) echo "0"; else echo "1";
+          ?>
+          ">
+            <span class="slide_switch_txt">Last 2 Years, Arctic Sea Ice: 
+                        <?php if ($show_volume) {
+                          echo "<span class=\"deemphasized\">Thickness</span>";
+                        } else {
+                          echo "<b>Thickness</b>";
+                        } ?>
+                      </span>
+              <label id="show_ts_type_switch" for="select_ts_type" class="switch">
+                          <input id="select_ts_type" name="show_volume" type="checkbox" <?php if ($show_volume) print "checked";?> onClick="this.form.submit();">
+                          <span class="slider round"></span>
+                      </label>
+                      <span class="slide_switch_txt">
+                        <?php if ($show_volume) {
+                          echo "<b>Volume</b>";
+                        } else {
+                          echo "<span class=\"deemphasized\">Volume</span>";
+                        } ?>
+                      </span>
+
+          </form>
+        </div> <!-- switch-container -->
+
+          <div id="ts_title">&nbsp; </div>
+          <p class="text-muted text-center"><small>Mean Sea ice volume grows each Arctic winter season from October to April</small></p>
             <div id="volume_ts_div" class=" third_height  
             <?php if ($expand_ts1) { echo " expanded_height " ; } ?>
             w3-border-bottom">
                   <!-- Plotly chart will be drawn inside this DIV -->
             </div>
+            <?php if ($expand_ts1) { ?>
+              <div class="w3-panel w3-border w3-light-grey w3-round-large">
+              <p><strong>Tips:</strong> You can double-click within the time-series to view the full time period available or to reset to the default view.</p>
+              <p>You can also select a section of the time-series chart to zoom in by dragging a rectangle
+                around the part you want to expand.</p>
+              </div> 
+            <?php } ?>
       </div> <!-- ts_pane 1 -->
 
       <!-- -----------------------------------------------------------------------
@@ -219,7 +257,37 @@
           </a>
           <?php } ?>
         </div>
-          <div id="ts_title">Arctic Sea Ice <b>Volume</b> Trend of Key Months</div>
+
+        <div class="switch-container">
+
+          <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
+          method="post" action="index.php?
+          <?php print "year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2";
+                print "&show_volume="; if ($show_volume) echo "0"; else echo "1";
+          ?>
+          ">
+            <span class="slide_switch_txt">Full mission, trend of key months: 
+                        <?php if ($show_volume) {
+                          echo "<span class=\"deemphasized\">Thickness</span>";
+                        } else {
+                          echo "<b>Thickness</b>";
+                        } ?>
+                      </span>
+              <label id="show_ts_type_switch" for="select_ts_type" class="switch">
+                          <input id="select_ts_type" name="show_volume" type="checkbox" <?php if ($show_volume) print "checked";?> onClick="this.form.submit();">
+                          <span class="slider round"></span>
+                      </label>
+                      <span class="slide_switch_txt">
+                        <?php if ($show_volume) {
+                          echo "<b>Volume</b>";
+                        } else {
+                          echo "<span class=\"deemphasized\">Volume</span>";
+                        } ?>
+                      </span>
+
+          </form>
+        </div> <!-- switch-container -->
+
           <p class="text-muted text-center"><small>Shows the trend in Arctic sea ice volume since 2010 when CryoSat was launched
             at the start (Oct), middle (Jan), and end (Apr) of the winter season.
           </small></p>
@@ -231,7 +299,11 @@
             </div>
 
             <?php if ($expand_ts2) { ?>
-              <p>Showing this for expanded</p>
+              <div class="w3-panel w3-border w3-light-grey w3-round-large">
+              <p><strong>Tips:</strong> You can double-click within the time-series to view the full time period available or to reset to the default view.</p>
+              <p>You can also select a section of the time-series chart to zoom in by dragging a rectangle
+                around the part you want to expand.</p>
+              </div> 
             <?php } ?>
 
       </div> <!-- ts_pane2 -->
