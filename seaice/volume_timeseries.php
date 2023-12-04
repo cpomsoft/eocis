@@ -6,7 +6,7 @@ if ($show_volume == 0) {
 //console_log($vol_ts_file);
 //$last_plot_month=11 ;
 //console_log("$first_plot_year-$first_plot_month-01 $last_plot_year-$last_plot_month-31");
-//console_log($vol_ts_file);
+console_log($vol_ts_file);
 
 ?>
 <script>
