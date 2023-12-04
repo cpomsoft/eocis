@@ -137,8 +137,7 @@
         <div class="switch-container">
 
           <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
-          method="post" action="index.php?
-          <?php print "year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2";
+          method="post" action="<?php print "index.php?year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2";
                 print "&show_volume="; if ($show_volume) echo "0"; else echo "1";
           ?>
           ">
