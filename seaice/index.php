@@ -111,8 +111,8 @@
               </div>
               
             </div>
-        </div> <!-- downloads_dropdown -->
-      </div> <!-- volume_btn_wrapper -->
+        </div> <!-- ts_download_btn -->
+      </div> <!-- ts_download_btn_wrapper -->
 
             <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
             method="post" action="<?php print "index.php?year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2";
@@ -121,7 +121,7 @@
             ">
               <span class="slide_switch_txt"> Mean Arctic
                           <?php if ($show_volume) {
-                            echo "<span class=\"deemphasized\">Thickness</span>";
+                            echo "<span class=\"\">Thickness</span>";
                           } else {
                             echo "<b>Thickness</b>";
                           } ?>
@@ -134,7 +134,7 @@
                           <?php if ($show_volume) {
                             echo "<b>Volume</b>";
                           } else {
-                            echo "<span class=\"deemphasized\">Volume</span>";
+                            echo "<span class=\"\">Volume</span>";
                           } ?>
                         </span> Time-series
 
