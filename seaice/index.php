@@ -137,7 +137,7 @@
         <div class="switch-container">
 
           <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
-          method="post" action="<?php print "index.php?year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2";
+          method="post" action="<?php print "index.php?year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2&show_volume2=$show_volume2";
                 print "&show_volume="; if ($show_volume) echo "0"; else echo "1";
           ?>
           ">
@@ -266,23 +266,23 @@
 
           <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
           method="post" action="index.php?
-          <?php print "year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2";
-                print "&show_volume="; if ($show_volume) echo "0"; else echo "1";
+          <?php print "year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2&show_volume=$show_volume";
+                print "&show_volume2="; if ($show_volume2) echo "0"; else echo "1";
           ?>
           ">
             <span class="slide_switch_txt">Full mission, trend of key months: 
-                        <?php if ($show_volume) {
+                        <?php if ($show_volume2) {
                           echo "<span class=\"deemphasized\">Thickness</span>";
                         } else {
                           echo "<b>Thickness</b>";
                         } ?>
                       </span>
               <label id="show_ts_type_switch" for="select_ts_type" class="switch">
-                          <input id="select_ts_type" name="show_volume" type="checkbox" <?php if ($show_volume) print "checked";?> onClick="this.form.submit();">
+                          <input id="select_ts_type" name="show_volume2" type="checkbox" <?php if ($show_volume) print "checked";?> onClick="this.form.submit();">
                           <span class="slider round"></span>
                       </label>
                       <span class="slide_switch_txt">
-                        <?php if ($show_volume) {
+                        <?php if ($show_volume2) {
                           echo "<b>Volume</b>";
                         } else {
                           echo "<span class=\"deemphasized\">Volume</span>";
@@ -297,7 +297,7 @@
           </small></p>
 
             <div id="<?php 
-            if ($show_volume) {
+            if ($show_volume2) {
               echo "volume"; 
             } else {
               echo "thickness";
@@ -647,9 +647,12 @@
 <?php
      if ($show_volume) {
       include 'volume_timeseries.php';
-      include 'volume_timeseries2.php';
      } else {
       include 'thickness_timeseries.php';
+     }
+     if ($show_volume2) {
+      include 'volume_timeseries2.php';
+     } else {
       include 'thickness_timeseries2.php';
      }
     

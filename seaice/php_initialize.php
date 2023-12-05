@@ -35,6 +35,25 @@
             $show_volume=1;
         }
 
+        // ----------------------------------------------------------------------------
+        //    show_volume2  (to choose to display volume or thickness)
+        //    Allowed values: 0,1
+        // ----------------------------------------------------------------------------
+
+        $all_show_volume2=array(0,1);
+
+        if(isset($_POST['show_volume2'])) {
+            $show_volume2=$_POST['show_volume2'];
+        } else {
+            if(isset($_GET['show_volume2'])) {
+                $show_volume2=$_GET['show_volume2'];
+            } else $show_volume2=1;
+        }
+
+         if (!in_array($show_volume2,$all_show_volume2)) {
+            $show_volume2=1;
+        }
+
         if(isset($_POST['expand_thick_image'])) {
             $expand_thick_image=$_POST['expand_thick_image'];
         } else {
