@@ -165,7 +165,12 @@
 
           <div id="ts_title">&nbsp; </div>
           <p class="text-muted text-center"><small>Mean Sea ice volume grows each Arctic winter season from October to April</small></p>
-            <div id="volume_ts_div" class=" third_height  
+            <div id="<?php 
+            if ($show_volume) {
+              echo "volume"; 
+            } else {
+              echo "thickness";
+            }?>_ts_div" class=" third_height  
             <?php if ($expand_ts1) { echo " expanded_height " ; } ?>
             w3-border-bottom">
                   <!-- Plotly chart will be drawn inside this DIV -->
@@ -636,6 +641,7 @@
 <!-- Plotly timeseries and availability charts drawn by Plotly javascript-->
 <?php
     include 'volume_timeseries.php';
+    include 'thickness_timeseries.php';
     include 'volume_timeseries2.php';
 
 ?>
