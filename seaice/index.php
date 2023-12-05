@@ -81,21 +81,7 @@
 
                       print "<a ";
                       print "class=\"dropdown-item active\"";
-                      print "href=\"data/$this_prod\">Download selected month: $month/$year";
-                      print "</a> ";
-
-                      $this_prod= "EOCIS-SEAICE-L3C-SITHICK-CS2-5KM-$last_year" . sprintf("%02d", $last_month) . '-fv1.0.nc';
-
-                      print "<a ";
-                      print "class=\"dropdown-item\"";
-                      print "href=\"data/$this_prod\">Download latest month: $last_month/$last_year";
-                      print "</a> ";
-
-                      $this_prod= "EOCIS-SEAICE-L3C-SITHICK-CS2-5KM-ALL-fv1.0.zip";
-
-                      print "<a ";
-                      print "class=\"dropdown-item\"";
-                      print "href=\"data/$this_prod\">Download all months as a zip file: $first_month/$first_year -> $last_month/$last_year";
+                      print "href=\"data/$this_prod\">Download time-series data as netcdf containing thickness and volume";
                       print "</a> ";
 
                       print "<a ";
