@@ -296,7 +296,12 @@
             at the start (Oct), middle (Jan), and end (Apr) of the winter season.
           </small></p>
 
-            <div id="volume_ts2_div" class=" third_height  
+            <div id="<?php 
+            if ($show_volume) {
+              echo "volume"; 
+            } else {
+              echo "thickness";
+            }?>_ts2_div" class=" third_height  
             <?php if ($expand_ts2) { echo " expanded_height " ; } ?>
             w3-border-bottom">
                   <!-- Plotly chart will be drawn inside this DIV -->
