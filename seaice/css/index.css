@@ -246,10 +246,23 @@
     position: relative;
 }
 
+.ts_download_btn_wrapper {
+  position: relative;
+}
+
+.ts_download_btn {
+  position: absolute;
+  top: 5px;
+  left: -35px;
+  margin-left: 0px;
+  margin-right: 5px;
+  font-size:10px;
+}
+
 .volume_btn {
     position: absolute;
     top: 5px;
-    margin-left: 5px;
+    margin-left: 0px;
     margin-right: 5px;
     font-size:10px;
 }

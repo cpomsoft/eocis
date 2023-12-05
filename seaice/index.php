@@ -64,8 +64,8 @@
           <div class="switch-container">
 
           <!-- download dropdown for TS -->
-      <div class="volume_btn_wrapper">
-      <div class="volume_btn btn-group">
+      <div class="ts_download_btn_wrapper">
+      <div class="ts_download_btn btn-group">
             <div class="button-wrapper">
 
               <button type="button" class="btn btn-sm btn-secondary  ct_dropdown_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
