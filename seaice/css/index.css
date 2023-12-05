@@ -354,3 +354,10 @@ input:checked + .slider:before {
 }
 
 .deemphasized { color: #444; font-size: 0.9em; }
+
+#thickness_volume_selector_pane {
+  height: 50px;
+  border-style: solid;
+    border-width: 2px;
+    border-color:lavender;
+}

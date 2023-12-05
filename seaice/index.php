@@ -58,15 +58,12 @@
           radar altimetry measurements taken from the ESA CryoSAT-2 mission during the winter months (Oct-Apr).</p>
         
         <!-- -----------------------------------------------------------------------
-              Volume Time Series 1
+              Thickness/Volume Selector Pane
         --------------------------------------------------------------------------- -->
-        <div class="ts_pane
-        <?php if ($expand_ts1) { echo "expand_ts" ; } ?>
-        <?php if ($expand_report_div) { echo " hide " ; } ?>
-        <?php if ($expand_ts2) { echo " hide " ; } ?>
-        ">
+        <div id="thickness_volume_selector_pane">
+          <div class="switch-container">
 
-        <!-- download dropdown for TS -->
+          <!-- download dropdown for TS -->
       <div class="volume_btn_wrapper">
       <div class="volume_btn btn-group">
             <div class="button-wrapper">
@@ -117,6 +114,45 @@
         </div> <!-- downloads_dropdown -->
       </div> <!-- volume_btn_wrapper -->
 
+            <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
+            method="post" action="<?php print "index.php?year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2";
+                  print "&show_volume="; if ($show_volume) echo "0"; else echo "1";
+            ?>
+            ">
+              <span class="slide_switch_txt"> Mean Arctic
+                          <?php if ($show_volume) {
+                            echo "<span class=\"deemphasized\">Thickness</span>";
+                          } else {
+                            echo "<b>Thickness</b>";
+                          } ?>
+                        </span>
+                <label id="show_ts_type_switch" for="select_ts_type" class="switch">
+                            <input id="select_ts_type" name="show_volume" type="checkbox" <?php if ($show_volume) print "checked";?> onClick="this.form.submit();">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="slide_switch_txt">
+                          <?php if ($show_volume) {
+                            echo "<b>Volume</b>";
+                          } else {
+                            echo "<span class=\"deemphasized\">Volume</span>";
+                          } ?>
+                        </span> Time-series
+
+            </form>
+            
+      </div> <!-- switch-container -->
+
+      </div> <!-- thickness_volume_selector_pane -->
+
+        <!-- -----------------------------------------------------------------------
+              Volume Time Series 1
+        --------------------------------------------------------------------------- -->
+        <div class="ts_pane
+        <?php if ($expand_ts1) { echo "expand_ts" ; } ?>
+        <?php if ($expand_report_div) { echo " hide " ; } ?>
+        <?php if ($expand_ts2) { echo " hide " ; } ?>
+        ">
+
           <!-- Expand window icon -->
         <div class="expand-icon-container_ts">
           <?php if (!$expand_ts1) { ?>
@@ -134,36 +170,7 @@
           <?php } ?>
         </div>
 
-        <div class="switch-container">
-
-          <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
-          method="post" action="<?php print "index.php?year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2&show_volume2=$show_volume2";
-                print "&show_volume="; if ($show_volume) echo "0"; else echo "1";
-          ?>
-          ">
-            <span class="slide_switch_txt">Last 2 Years, Arctic Sea Ice: 
-                        <?php if ($show_volume) {
-                          echo "<span class=\"deemphasized\">Thickness</span>";
-                        } else {
-                          echo "<b>Thickness</b>";
-                        } ?>
-                      </span>
-              <label id="show_ts_type_switch" for="select_ts_type" class="switch">
-                          <input id="select_ts_type" name="show_volume" type="checkbox" <?php if ($show_volume) print "checked";?> onClick="this.form.submit();">
-                          <span class="slider round"></span>
-                      </label>
-                      <span class="slide_switch_txt">
-                        <?php if ($show_volume) {
-                          echo "<b>Volume</b>";
-                        } else {
-                          echo "<span class=\"deemphasized\">Volume</span>";
-                        } ?>
-                      </span>
-
-          </form>
-        </div> <!-- switch-container -->
-
-          <div id="ts_title">&nbsp; </div>
+          <div id="ts_title">Last 2-years</div>
           <p class="text-muted text-center"><small>Mean Sea ice volume grows each Arctic winter season from October to April</small></p>
             <div id="<?php 
             if ($show_volume) {
@@ -191,59 +198,7 @@
         <?php if ($expand_ts2) { echo "expand_ts" ; } ?>
         <?php if ($expand_report_div) { echo " hide " ; } ?>
         <?php if ($expand_ts1) { echo " hide " ; } ?>
-
         ">
-
-        <!-- download dropdown for TS -->
-      <div class="volume_btn_wrapper">
-      <div class="volume_btn btn-group">
-            <div class="button-wrapper">
-
-              <button type="button" class="btn btn-sm btn-secondary  ct_dropdown_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-</svg>
-               <span class="caret"></span>
-              </button>
-              <div class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdown_menu_month">
-                <?php
-                      $this_prod= "EOCIS-SEAICE-L3C-SITHICK-CS2-5KM-$year" . sprintf("%02d", $month) . '-fv1.0.nc';
-
-                      print "<a ";
-                      print "class=\"dropdown-item active\"";
-                      print "href=\"data/$this_prod\">Download selected month: $month/$year";
-                      print "</a> ";
-
-                      $this_prod= "EOCIS-SEAICE-L3C-SITHICK-CS2-5KM-$last_year" . sprintf("%02d", $last_month) . '-fv1.0.nc';
-
-                      print "<a ";
-                      print "class=\"dropdown-item\"";
-                      print "href=\"data/$this_prod\">Download latest month: $last_month/$last_year";
-                      print "</a> ";
-
-                      $this_prod= "EOCIS-SEAICE-L3C-SITHICK-CS2-5KM-ALL-fv1.0.zip";
-
-                      print "<a ";
-                      print "class=\"dropdown-item\"";
-                      print "href=\"data/$this_prod\">Download all months as a zip file: $first_month/$first_year -> $last_month/$last_year";
-                      print "</a> ";
-
-                      print "<a ";
-                      print "class=\"dropdown-item\"";
-                      print "href=\"download_info.php\">Manual/Automated downloads "; ?>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
-  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-</svg>
-                      <?php
-                      print "</a> ";
-                ?>
-              </div>
-              
-            </div>
-        </div> <!-- downloads_dropdown -->
-      </div> <!-- volume_btn_wrapper -->
 
           <!-- Expand window icon -->
         <div class="expand-icon-container_ts">
@@ -262,42 +217,15 @@
           <?php } ?>
         </div>
 
-        <div class="switch-container">
-
-          <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
-          method="post" action="index.php?
-          <?php print "year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2&show_volume=$show_volume";
-                print "&show_volume2="; if ($show_volume2) echo "0"; else echo "1";
-          ?>
-          ">
-            <span class="slide_switch_txt">Full mission, trend of key months: 
-                        <?php if ($show_volume2) {
-                          echo "<span class=\"deemphasized\">Thickness</span>";
-                        } else {
-                          echo "<b>Thickness</b>";
-                        } ?>
-                      </span>
-              <label id="show_ts_type_switch" for="select_ts_type" class="switch">
-                          <input id="select_ts_type" name="show_volume2" type="checkbox" <?php if ($show_volume) print "checked";?> onClick="this.form.submit();">
-                          <span class="slider round"></span>
-                      </label>
-                      <span class="slide_switch_txt">
-                        <?php if ($show_volume2) {
-                          echo "<b>Volume</b>";
-                        } else {
-                          echo "<span class=\"deemphasized\">Volume</span>";
-                        } ?>
-                      </span>
-
-          </form>
-        </div> <!-- switch-container -->
+        
+        <div id="ts_title">Full Mission (key winter months): <?php print "$first_year:$last_year";?></div>
 
           <p class="text-muted text-center"><small>Shows the trend in Arctic sea ice volume since 2010 when CryoSat was launched
             at the start (Oct), middle (Jan), and end (Apr) of the winter season.
           </small></p>
 
             <div id="<?php 
-            if ($show_volume2) {
+            if ($show_volume) {
               echo "volume"; 
             } else {
               echo "thickness";
@@ -647,18 +575,11 @@
 <?php
      if ($show_volume) {
       include 'volume_timeseries.php';
-     } else {
-      include 'thickness_timeseries.php';
-     }
-     if ($show_volume2) {
       include 'volume_timeseries2.php';
      } else {
+      include 'thickness_timeseries.php';
       include 'thickness_timeseries2.php';
      }
-    
-    
-
-
 ?>
 
 <dialog id="myDialog">
