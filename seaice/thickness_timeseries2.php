@@ -163,7 +163,7 @@ $vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_th
             };
 
 
-            Plotly.newPlot('volume_ts2_div', data, layout, { displaylogo: false, responsive: true, scrollZoom: false,modeBarButtonsToRemove: ['select2d','lasso2d','toggleSpikelines','hoverClosestGl2d','hoverClosestCartesian', 'hoverCompareCartesian','resetScale2d']});
+            Plotly.newPlot('thickness_ts2_div', data, layout, { displaylogo: false, responsive: true, scrollZoom: false,modeBarButtonsToRemove: ['select2d','lasso2d','toggleSpikelines','hoverClosestGl2d','hoverClosestCartesian', 'hoverCompareCartesian','resetScale2d']});
         })
 
         <?php } else {
