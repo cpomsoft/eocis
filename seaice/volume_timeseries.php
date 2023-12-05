@@ -1,5 +1,6 @@
 <?php  
 $vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_volume.csv";
+$ts_exists=file_exists($vol_ts_file);
 
 //console_log($vol_ts_file);
 //$last_plot_month=11 ;

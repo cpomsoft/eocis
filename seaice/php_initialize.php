@@ -225,8 +225,6 @@
         $last_plot_year=$last_year;
         $last_plot_month=$last_month;
 
-
-
         console_log("first_plot_month=$first_plot_month");
         console_log("last_plot_month=$last_plot_month");
         console_log("first_plot_year=$first_plot_year");
