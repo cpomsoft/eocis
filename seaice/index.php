@@ -145,7 +145,7 @@
       </div> <!-- thickness_volume_selector_pane -->
 
         <!-- -----------------------------------------------------------------------
-              Volume Time Series 1
+             Time Series 1: Last 2 Years
         --------------------------------------------------------------------------- -->
         <div class="ts_pane
         <?php if ($expand_ts1) { echo "expand_ts" ; } ?>
@@ -170,7 +170,7 @@
           <?php } ?>
         </div>
 
-          <div id="ts_title">Last 2-years</div>
+          <div id="ts_title">Time-series of Last 2-years</div>
           <p class="text-muted text-center"><small>Mean Sea ice volume grows each Arctic winter season from October to April</small></p>
             <div id="<?php 
             if ($show_volume) {
@@ -218,7 +218,7 @@
         </div>
 
         
-        <div id="ts_title">Full Mission (key winter months): <?php print "$first_year:$last_year";?></div>
+        <div id="ts_title">Full Period (key winter months): <?php print "$first_year:$last_year";?></div>
 
           <p class="text-muted text-center"><small>Shows the trend in Arctic sea ice volume since 2010 when CryoSat was launched
             at the start (Oct), middle (Jan), and end (Apr) of the winter season.
@@ -545,15 +545,18 @@
             </div>
 
               <?php if (!$expand_report_div) { ?>
-              <p class="report_txt">In the first quarter of 2023, sea ice volume increased from 19.05 thousand km3 in January to 24.01 
+              <p class="report_txt">In the first quarter of 2023, sea ice volume increased from 19.05 thousand km3 
+                in January to 24.01 
                 thousand km3 in March. However, March sea ice volume was the second lowest on record after the 
                 minimum in 2021. This can be attributed to a combination of low sea ice extent (second lowest on 
-                record for March at 13.57 million km2), and below average sea ice thickness, at 1.77 m compared to a 
-                2011-2023 of 1.79 m. In particular, the extent of first-year ice (FYI) and thickness of MYI were 
+                record for March at 13.57 million km2), and below average sea ice thickness, at 1.77 m compared 
+                to a 
+                2011-2023 of 1.79 m. </p><p>In particular, the extent of first-year ice (FYI) and thickness of MYI were 
                 below average throughout the first quarter.
-                Between January and February, the magnitude of sea ice change has not shown a significant trend since 2011. 
+                Between January and February, the magnitude of sea ice change has not shown a significant trend 
+                since 2011. 
                 Between February and March, volume has shown a decrease in magnitude since 2011, attributable to 
-                decreasing sea ice extent. [<a href="?<?php print "month=$month&year=$year&param=$param&expand_report_div=1";?>">See full report..</a>]
+                decreasing sea ice extent. [<a href="?<?php print "month=$month&year=$year&param=$param&expand_report_div=1";?>">See full pdf report..</a>]
               </p>
               <?php } else {?>
                 <object data="reports/Q1_2023_ASW.pdf" type="application/pdf" width="100%" height="600">
