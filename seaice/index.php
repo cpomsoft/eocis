@@ -648,6 +648,8 @@
     include 'volume_timeseries.php';
     include 'thickness_timeseries.php';
     include 'volume_timeseries2.php';
+    include 'thickness_timeseries2.php';
+
 
 ?>
 
