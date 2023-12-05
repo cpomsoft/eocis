@@ -1,8 +1,6 @@
 <?php  
-$vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_volume.csv";
-if ($show_volume == 0) {
-    $vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_thickness.csv";
-}
+$vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_thickness.csv";
+
 //console_log($vol_ts_file);
 //$last_plot_month=11 ;
 //console_log("$first_plot_year-$first_plot_month-01 $last_plot_year-$last_plot_month-31");
