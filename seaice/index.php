@@ -645,10 +645,15 @@
 
 <!-- Plotly timeseries and availability charts drawn by Plotly javascript-->
 <?php
-    include 'volume_timeseries.php';
-    include 'thickness_timeseries.php';
-    include 'volume_timeseries2.php';
-    include 'thickness_timeseries2.php';
+     if ($show_volume) {
+      include 'volume_timeseries.php';
+      include 'volume_timeseries2.php';
+     } else {
+      include 'thickness_timeseries.php';
+      include 'thickness_timeseries2.php';
+     }
+    
+    
 
 
 ?>

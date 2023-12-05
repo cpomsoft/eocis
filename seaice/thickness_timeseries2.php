@@ -15,20 +15,11 @@ $vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_th
             /*Date,volume,January_volume,October_volume,April_volume
             */
             <?php
-
-                if ($show_volume) {
-                    $plot_y_title="Mean Sea Ice Volume (km3)";
-                    $unpack_param='volume';
-                    $param_name='Volume';
-                    $param_units='km3';
-                } else {
-                    $plot_y_title="Mean Sea Ice Thickness (m)";
-                    $unpack_param='thickness';
-                    $param_name='Thickness';
-                    $param_units='m';
-                }
+                $plot_y_title="Mean Sea Ice Thickness (m)";
+                $unpack_param='thickness';
+                $param_name='Thickness';
+                $param_units='m';
                 $plot_name = 'All files';
-
             ?>
 
             
