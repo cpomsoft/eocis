@@ -1,6 +1,6 @@
 <?php  
 $vol_ts_file =  "timeseries_data/$mission/$farea/timeseries_".$basin_number."_thickness.csv";
-}
+
 //console_log($vol_ts_file);
 ?>
 <script>
