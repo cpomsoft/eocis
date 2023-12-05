@@ -13,7 +13,7 @@ console_log($vol_ts_file);
         <?php if ($ts_exists) { ?>
 
 
-        Plotly.d3.csv("<?php echo $vol_ts_file;?>", function(err, rows){
+        Plotly.d3.csv("<?php echo $vol_ts_file;?>?+(new Date()).getTime()", function(err, rows){
 
 
             function unpack(rows, key) {
