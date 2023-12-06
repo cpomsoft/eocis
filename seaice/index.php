@@ -653,7 +653,7 @@
 <dialog id="myMapDialog">
         <button id="closeDialogBtn2">Close</button>
         <div class="img-overlay-wrap">
-        <image src="images/arctic_map.png" width="100%">
+        <image src="images/arctic_map.png" >
         <?php require 'arctic_regions.php';?>
     </div>
     </dialog>

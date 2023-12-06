@@ -443,10 +443,17 @@ transition: transform 150ms ease-in-out;
  display: block;
  max-width: 100%;
  height: auto;
+ 
 }
 
 .img-overlay-wrap svg {
 position: absolute;
 top: 0;
 left: 0;
+}
+
+#myMapDialog {
+  background-color: aliceblue;
+  width: auto;
+  height: auto;
 }
