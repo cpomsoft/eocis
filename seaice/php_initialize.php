@@ -20,7 +20,8 @@
         //    show_volume  (to choose to display volume or thickness)
         //    Allowed values: 0,1
         // ----------------------------------------------------------------------------
-
+        $area='arctic';
+        
         $all_show_volume=array(0,1);
 
         if(isset($_POST['show_volume'])) {
@@ -194,13 +195,65 @@
         $all_months=array(1,2,3,4,0,10,11,12);
         $months_str=array('Jan', 'Feb', 'Mar', 'Apr','-' ,'Oct','Nov','Dec');
 
+        // ----------------------------------------------------------------------------
+        //    Select basin_number to show (must be numeric 0-17)
+        // ----------------------------------------------------------------------------
+
+        if(isset($_POST['basin_number'])) {
+            $basin_number=$_POST['basin_number'];
+        } else {
+            if(isset($_GET['basin_number'])) {
+                $basin_number=$_GET['basin_number'];
+            } else $basin_number=0;
+        }
+
+        if (! is_numeric($basin_number) ) $basin_number = 0;
+
+        if ($area == 'arctic') {
+            
+            $basin_names=array('Arctic',
+            'Amerasian Basin',
+            'Eurasian Basin',
+            'Canadian Archipelago',
+            'Hudson & Foxe Bays',
+            'Bafin Bay',
+            'Greenland Sea',
+            'Iceland Sea',
+            'Norwegian Sea',
+            'Barents Sea',
+            'White Sea',
+            'Kara Sea',
+            'Siberian Shelf Seas',
+            'Bering Sea',
+            'Sea of Okhotsk',
+            'Baltic Sea & Gulfs',
+            'Gulf of St Lawrence & Nova Scotia Peninsular',
+            'Labrador Sea');
+
+
+        } else {
+
+            $basin_names=array('Antarctic Ocean',
+            'Ross Sector',
+            'Pacific Ocean Sector',
+            'Indian Ocean Sector',
+            'East Weddell',
+            'West Weddell',
+            'Amundsen-Bellingshausen Coastal Zone',
+            'Amundsen-Bellingshausen Ocean Zone');
+
+        }
+        if ($basin_number > (count($basin_names)-1)) $basin_number=0;
+        if ($basin_number < 0) $basin_number=0;
+
+        
+       $basin_name = $basin_names[$basin_number];
+
         // Check if the timeseries file exists
         $mission='cs2';
         $farea='arco';
-        $basin_number=0;
-        $basin_name='Arctic';
-        $ts_file="timeseries_data/$mission/$farea/timeseries_".$basin_number."_thickness.csv";
-        $ts_exists=file_exists($ts_file);
+        // $ts_file="timeseries_data/$mission/$farea/timeseries_".$basin_number."_thickness.csv";
+        // $ts_exists=file_exists($ts_file);
 
         $first_plot_year=$last_year-2;
         $first_plot_month=$last_month;
@@ -211,5 +264,8 @@
         console_log("last_plot_month=$last_plot_month");
         console_log("first_plot_year=$first_plot_year");
         console_log("last_plot_year=$last_plot_year");
+
+        $zoom=0;
+        $show_regions=1;
 
 ?>

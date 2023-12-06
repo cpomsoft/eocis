@@ -253,7 +253,7 @@
 .ts_download_btn {
   position: absolute;
   top: 5px;
-  left: -35px;
+  left: 5px;
   margin-left: 0px;
   margin-right: 5px;
   font-size:10px;
@@ -369,8 +369,84 @@ input:checked + .slider:before {
 .deemphasized { color: #444; font-size: 0.9em; }
 
 #thickness_volume_selector_pane {
-  height: 50px;
+  height: auto;
   border-style: solid;
-    border-width: 2px;
-    border-color:lavender;
+  border-width: 2px;
+  border-color:lavender;
+}
+
+#region_dropdown {
+  
+}
+
+.button-wrapper {
+}
+
+#thickness_volume_selector_pane_row1 {
+  display: flex;
+}
+#thickness_volume_selector_pane_row2 {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+
+}
+
+#map_btn {
+  margin-left: 5px;
+}
+
+
+.map-highlight_alwayson polygon {
+  stroke: #5C5C96 !important;
+  fill-opacity: 0.4;
+  stroke-width: 4 !important;
+  fill: none !important;
+}
+
+.map-highlight_alwayson_selected polygon {
+  stroke: red !important;
+  fill-opacity: 0.4;
+  fill: none !important;
+}
+
+.map-highlight_alwayson:hover polygon {
+  stroke: black !important;
+  stroke-width: 4 !important;
+  stroke-opacity: 1.0 !important;
+  fill-opacity: 0.4;
+  fill: red !important;
+}
+
+.map-highlight polygon {
+  stroke: none !important;
+  fill-opacity: 0.4;
+  fill: none !important;
+}
+
+.map-highlight:hover polygon {
+  stroke: black !important;
+  stroke-width: 4 !important;
+  stroke-opacity: 1.0 !important;
+  fill-opacity: 0.4;
+  fill: red !important;
+}
+
+.img-overlay-wrap {
+position: relative;
+display: inline-block; /* <= shrinks container to image size */
+transition: transform 150ms ease-in-out;
+}
+
+.img-overlay-wrap img { /* <= optional, for responsiveness */
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
+
+.img-overlay-wrap svg {
+position: absolute;
+top: 0;
+left: 0;
 }
