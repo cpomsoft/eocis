@@ -82,7 +82,7 @@
 
                             print "<a ";
                             print "class=\"dropdown-item active\"";
-                            print "href=\"data/$this_prod\">Download time-series data as netcdf containing thickness and volume";
+                            print "href=\"timeseries_data/cs2/arco/latest/$latest_ts_filename\">Download latest time-series data as netcdf containing both thickness and volume";
                             print "</a> ";
 
                             print "<a ";
@@ -688,43 +688,28 @@
 
 <script>
   // Get references to the elements
-  const openDialogLink = document.getElementById('map_btn_link');
-  const myDialog = document.getElementById('myDialog');
-  const closeDialogButton = document.getElementById('closeDialog');
+  const openMapDialogLink = document.getElementById('map_btn');
+  const myMapDialog = document.getElementById('myMapDialog');
+  //const closeMapDialogButton = document.getElementById('closeDialog');
 
   // Add a click event listener to the link
-  openDialogLink.addEventListener('click', (event) => {
+  openMapDialogLink.addEventListener('click', (event) => {
     // Prevent the default link behavior (preventing page reload)
     event.preventDefault();
     // Show the dialog
-    myDialog.showModal();
+    myMapDialog.showModal();
   });
 
   // Add a click event listener to the close button
-  closeDialogButton.addEventListener('click', () => {
-    // Close the dialog
-    myDialog.close();
-  });
+  // closeMapDialogButton.addEventListener('click', () => {
+  //   // Close the dialog
+  //   myDialog.close();
+  // });
 </script>
 
 
 
-    <script>
-        // Get references to the dialog and buttons
-        const myDialog2 = document.getElementById('myMapDialog');
-        const openDialogBtn2 = document.getElementById('map_btn');
-        const closeDialogBtn2 = document.getElementById('closeDialogBtn2');
 
-        // Show the dialog when the button is clicked
-        openDialogBtn2.addEventListener('click', () => {
-            myDialog2.showModal();
-        });
-
-        // Close the dialog when the close button is clicked
-        closeDialogBtn2.addEventListener('click', () => {
-            myDialog2.close();
-        });
-    </script>
 
 <!-- =============================================================================================================
       Final Javascript

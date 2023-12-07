@@ -260,12 +260,21 @@
         $last_plot_year=$last_year;
         $last_plot_month=$last_month;
 
-        console_log("first_plot_month=$first_plot_month");
-        console_log("last_plot_month=$last_plot_month");
-        console_log("first_plot_year=$first_plot_year");
-        console_log("last_plot_year=$last_plot_year");
-
         $zoom=0;
         $show_regions=1;
 
+        // Get the latest timeseries file
+
+        $directory = 'timeseries_data/cs2/arco/latest';
+
+        // Get an array of file paths in the directory
+        $files = glob($directory . '/EOCIS-SEAICE-TIMESERIES-THICKVOL-CS2-ARCTIC-*.nc');
+        // Check if there is exactly one file
+        if (count($files) === 1) {
+            $latest_ts_filename = basename($files[0]);
+        } else {
+            $latest_ts_filename='';
+        }
+        //console_log($latest_ts_filename);
+        
 ?>
