@@ -437,13 +437,16 @@ input:checked + .slider:before {
 position: relative;
 display: inline-block; /* <= shrinks container to image size */
 transition: transform 150ms ease-in-out;
+border-style: solid;
+  border-width: 2px;
+  border-color:lavender;
 }
 
 .img-overlay-wrap img { /* <= optional, for responsiveness */
  display: block;
  max-width: 100%;
  height: auto;
- 
+ object-fit: contain;
 }
 
 .img-overlay-wrap svg {
@@ -453,7 +456,17 @@ left: 0;
 }
 
 #myMapDialog {
-  background-color: aliceblue;
-  width: auto;
-  height: auto;
+  background-color:#f6f6f6;
+}
+
+.myflex {
+  display: flex;
+}
+.select_txt {
+  margin-left: 20px;
+  text-align:center;
+}
+
+#selectAllBtn {
+  margin-left: 5px;
 }

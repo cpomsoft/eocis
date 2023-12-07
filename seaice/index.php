@@ -55,7 +55,8 @@
           and a significant influence on winter time weather in north west Europe.</p>
 
           <p>EOCIS sea ice thickness, volume and mass netcdf <a id="openDialog" href="">products</a> are generated monthly from 
-          radar altimetry measurements taken from the ESA CryoSAT-2 mission during the winter months (Oct-Apr).</p>
+          radar altimetry measurements taken from the ESA CryoSAT-2 mission during the winter months (Oct-Apr).
+        You can view or download products here.</p>
         
         <!-- -----------------------------------------------------------------------
               Thickness/Volume Selector Pane
@@ -651,12 +652,18 @@
 
 <!-- The Dialog -->
 <dialog id="myMapDialog">
-        <button id="closeDialogBtn2">Close</button>
         <div class="img-overlay-wrap">
-        <image src="images/arctic_map.png" >
-        <?php require 'arctic_regions.php';?>
-    </div>
-    </dialog>
+          <image src="images/arctic_map.png">
+           <?php require 'arctic_regions.php';?>
+        </div>
+        <div class="myflex">
+          <!--<button id="closeDialogBtn2">Close</button>-->
+          <a href="?basin_number=0&<?php print"show_volume=$show_volume&param=$param&month=$month&year=$year&param=$param"?>">
+          <button id="selectAllBtn">Select Whole Arctic</button></a>
+          <p class="select_txt">
+              Select an Arctic basin in the map to show its time-series</p>
+          </div>
+</dialog>
 
 <script>
   // Get references to the elements
