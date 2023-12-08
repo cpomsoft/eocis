@@ -210,10 +210,10 @@
     color:darkgray;
   }
 
-  .bg-dark a {
+  /* .bg-dark a {
     text-decoration: none;
-    color: inherit; /* This sets the link color to inherit from its parent */
-  }
+    color: inherit; 
+  } */
 
   .filename_txt {
     font-size: 12px; /* Adjust the font size as needed */
@@ -469,4 +469,8 @@ left: 0;
 
 #selectAllBtn {
   margin-left: 5px;
+}
+
+.prod_txt {
+  height: auto;
 }

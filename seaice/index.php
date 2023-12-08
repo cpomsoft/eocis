@@ -4,19 +4,19 @@
   <title>EOCIS Sea Ice</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
  <!-- Load plotly.js for timeseries charts -->
   <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
   <?php include 'php_initialize.php';?>
 
   
 </head>
-<body class="">
+<body>
 
   
 <div class=" p-4 ">
@@ -32,9 +32,21 @@
 
 <!-- ---------------------------------------------------------------------------------- -->
 
-<div class="bg-dark p-1 text-light">
-  <p class="m-1">EOCIS Sea Ice products will be available Dec 2023. </p>
-</div>
+<!-- <div class="bg-dark p-1 text-light">
+  <p class="m-1">Product information</p>
+</div> -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="product_info.php">Product Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="download_info.php">Download Info</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <!-- ---------------------------------------------------------------------------------- -->
 
@@ -54,7 +66,7 @@
           obstacle to maritime activities, a factor in habitat loss, 
           and a significant influence on winter time weather in north west Europe.</p>
 
-          <p>EOCIS sea ice thickness, volume and mass netcdf <a id="openDialog" href="">products</a> are generated monthly from 
+          <p>EOCIS sea ice thickness, volume and mass netcdf <a href="product_info.php">products</a> are generated monthly from 
           radar altimetry measurements taken from the ESA CryoSAT-2 mission during the winter months (Oct-Apr).
         You can view or download products here.</p>
         
@@ -665,26 +677,7 @@
           </div>
 </dialog>
 
-<script>
-  // Get references to the elements
-  const openDialogLink = document.getElementById('openDialog');
-  const myDialog = document.getElementById('myDialog');
-  const closeDialogButton = document.getElementById('closeDialog');
 
-  // Add a click event listener to the link
-  openDialogLink.addEventListener('click', (event) => {
-    // Prevent the default link behavior (preventing page reload)
-    event.preventDefault();
-    // Show the dialog
-    myDialog.showModal();
-  });
-
-  // Add a click event listener to the close button
-  closeDialogButton.addEventListener('click', () => {
-    // Close the dialog
-    myDialog.close();
-  });
-</script>
 
 <script>
   // Get references to the elements
