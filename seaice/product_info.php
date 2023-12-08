@@ -67,7 +67,7 @@
       <tr><td>Arctic Sea Ice Thickness Grids</td><td>CryoSat-2<br>L1b Baseline-E</td><td>1 Month</td><td>Nov-2010 until present</td><td>Winter(Oct-Apr)</td><td>-2 months</td><td>Grid (5km)</td><td>EPSG:3413</td><td>NetCDF4</td></tr>
       <tr><td>Arctic Sea Ice Thickness & Volume Time-series</td><td>CryoSat-2<br>L1b Baseline-E</td><td>Nov-2010 until present</td><td>Nov-2010 until present</td><td>Winter(Oct-Apr)</td><td>-2 months</td><td>Monthly Time series</td><td></td><td>NetCDF4</td></tr>
     </table>
-    
+    <p>Note that Sea Ice Mass products will be added at a later date in 2024.</p>
     <!-- --------------------------------------------------------------------------------------------- -->
     <h3>Arctic Sea Ice Thickness Grids</h3>
     <div class="myflex">
