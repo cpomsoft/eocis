@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/main.css">
   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
  <!-- Load plotly.js for timeseries charts -->
   <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
