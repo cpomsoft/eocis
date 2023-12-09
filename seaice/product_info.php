@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css"></script>
 
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <?php include 'php_initialize.php';?>
@@ -21,11 +21,17 @@
   
 <div class=" p-4 ">
     <div class="row">  
-         <div class="col">
-          <a href="http://eocis.org"><image src="images/cropped-EOCIS-Logo-Final.png" alt="EOCIS logo" width="200px" ></a>
+         <div class="col-md-3 col-sm-3">
+          <a href="http://eocis.org"><image id="eocis_img" src="images/cropped-EOCIS-Logo-Final.png" alt="EOCIS logo"  ></a>
          </div>
-         <div class="col">
-          <h3 class="text-center">Sea Ice <br>Thickness, Volume and Mass Data</h3>
+         <div id="title_div" class="col-md-7  col-sm-9">
+          <h3 class="text-center fs-2">Arctic Sea Ice Thickness, and Volume Data</h3>
+         </div>
+         <div class="col-md-2  d-none d-md-block d-lg-block text-center">
+          <div class="cpom_img_wrapper">
+          <p class="cpom_img_txt">processed by:</p>
+          <a href="http://cpom.org.uk"><image class="cpom_img" src="images/cpom_white.png" alt="CPOM" ></a>
+          </div>
          </div>
     </div>
 </div>

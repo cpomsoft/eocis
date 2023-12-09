@@ -190,8 +190,32 @@
     margin-top: 5px;
     margin-bottom: 5px;
     padding-right: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 
   }
+
+  #thickness_ts_div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+
+  #volume_ts2_div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+
+  }
+
+  #thickness_ts2_div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+
 
   .expand-icon-container_ts {
     position: relative;
