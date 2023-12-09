@@ -506,7 +506,7 @@ left: 0;
 
 #title_div {
   /* Specify the background image URL */
-  background-image: url('images/sea_ice_bg.jpeg');
+  background-image: url('http://www.cpom.ucl.ac.uk/eocis/seaice/images/sea_ice_bg.jpeg');
 
   /* Set the background size to cover the entire div */
   background-size: cover;
@@ -517,8 +517,7 @@ left: 0;
 
   /* Add any additional styles you need for the div */
   /* For example, setting a height and padding */
-  height: 200px;
-  padding: 20px;
+  
 }
 /*======================================================================================================================
   width <= 545px;
