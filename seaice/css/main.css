@@ -376,10 +376,8 @@ input:checked + .slider:before {
 
 /* The switch container */
 .switch-container {
-  transform: scale(0.85); /* Adjust the scale factor as needed */
+  transform: scale(0.9); /* Adjust the scale factor as needed */
 }
-
-
   
 .inline_form {
   display: inline;
@@ -501,9 +499,6 @@ left: 0;
   height: auto;
 }
 
-/* .cpom_img {
-  float: right;
-} */
 .cpom_img {
   display: block; /* Make the image a block element */
   margin: 0 auto; /* Center the image horizontally */
@@ -517,11 +512,6 @@ left: 0;
 }
 
 .cpom_img_txt {
-  /* position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); 
-  margin: 0; */
   font-size: 12px;
 }
 
