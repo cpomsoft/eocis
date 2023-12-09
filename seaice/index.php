@@ -27,7 +27,7 @@
          <div id="title_div" class="col-md-7  col-sm-9">
           <h3 class="text-center fs-2">Arctic Sea Ice Thickness, and Volume Data</h3>
          </div>
-         <div class="col-md-2  d-md-block d-sm-none text-center ">
+         <div class="col-md-2  d-none d-md-block d-lg-block text-center">
           <div class="cpom_img_wrapper">
           <p class="cpom_img_txt">processed by:</p>
           <a href="http://cpom.org.uk"><image class="cpom_img" src="images/cpom_white.png" alt="CPOM" ></a>
@@ -56,6 +56,10 @@
         <a class="nav-link" href="download_info.php">Download Info</a>
       </li>
     </ul>
+    <span class="navbar-text ms-auto d-none d-md-block d-lg-block"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+</svg> New products monthly</span>
   </div>
 </nav>
 
@@ -211,10 +215,10 @@
         <!-- -----------------------------------------------------------------------
              Time Series 1: Last 2 Years
         --------------------------------------------------------------------------- -->
-        <div class="ts_pane
+        <div class="
         <?php if ($expand_ts1) { echo "expand_ts" ; } ?>
         <?php if ($expand_report_div) { echo " hide " ; } ?>
-        <?php if ($expand_ts2) { echo " hide " ; } ?>
+        <?php if ($expand_ts2) { echo " hide " ; } ?> ts_pane
         ">
 
           <!-- Expand window icon -->

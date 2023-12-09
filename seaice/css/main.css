@@ -163,6 +163,8 @@
 
     background-color:#f6f6f6;
     box-sizing: border-box;
+    overflow: auto;
+    height: auto;
   }
 
   #prod_title {
@@ -237,7 +239,7 @@
     left: 10px;
     z-index: 99;
     width: 95vw;
-    height: 60vh;
+    /* height: 60vh; */
     margin: 8px;
     background-color: #f6f6f6;
 }  
