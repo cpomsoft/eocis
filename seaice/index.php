@@ -24,7 +24,7 @@
          <div class="col-md-3 col-sm-3">
           <a href="http://eocis.org"><image id="eocis_img" src="images/cropped-EOCIS-Logo-Final.png" alt="EOCIS logo"  ></a>
          </div>
-         <div class="col-md-7  col-sm-9">
+         <div id="title_div" class="col-md-7  col-sm-9">
           <h3 class="text-center fs-2">Arctic Sea Ice Thickness, and Volume Data</h3>
          </div>
          <div class="col-md-2  d-md-block d-sm-none text-center ">

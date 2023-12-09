@@ -503,6 +503,23 @@ left: 0;
   width: 200px;
 }
 
+
+#title_div {
+  /* Specify the background image URL */
+  background-image: url('images/sea_ice_bg.jpeg');
+
+  /* Set the background size to cover the entire div */
+  background-size: cover;
+
+  /* Optionally, you can set other properties like background position, repeat, etc. */
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* Add any additional styles you need for the div */
+  /* For example, setting a height and padding */
+  height: 200px;
+  padding: 20px;
+}
 /*======================================================================================================================
   width <= 545px;
 ========================================================================================================================*/
