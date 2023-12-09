@@ -21,11 +21,17 @@
   
 <div class=" p-4 ">
     <div class="row">  
-         <div class="col-md-6">
-          <a href="http://eocis.org"><image src="images/cropped-EOCIS-Logo-Final.png" alt="EOCIS logo" width="200px" ></a>
+         <div class="col-md-3 col-sm-3">
+          <a href="http://eocis.org"><image id="eocis_img" src="images/cropped-EOCIS-Logo-Final.png" alt="EOCIS logo"  ></a>
          </div>
-         <div class="col-md-6">
-          <h3 class="text-center">Sea Ice <br>Thickness, Volume and Mass Data</h3>
+         <div class="col-md-7  col-sm-9">
+          <h3 class="text-center fs-2">Arctic Sea Ice Thickness, and Volume Data</h3>
+         </div>
+         <div class="col-md-2  d-md-block d-sm-none text-center ">
+          <div class="cpom_img_wrapper">
+          <p class="cpom_img_txt">processed by:</p>
+          <a href="http://cpom.org.uk"><image class="cpom_img" src="images/cpom_white.png" alt="CPOM" ></a>
+          </div>
          </div>
     </div>
 </div>
@@ -38,6 +44,11 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link active" href="http://www.cpom.ucl.ac.uk/eocis/seaice"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+</svg></a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="product_info.php">Product Info</a>
       </li>

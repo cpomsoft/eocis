@@ -474,3 +474,45 @@ left: 0;
 .prod_txt {
   height: auto;
 }
+
+/* .cpom_img {
+  float: right;
+} */
+.cpom_img {
+  display: block; /* Make the image a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  background-color: black;
+  width: 70px;
+}
+
+
+.cpom_img_wrapper {
+  position: relative;
+}
+
+.cpom_img_txt {
+  /* position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); 
+  margin: 0; */
+  font-size: 12px;
+}
+
+#eocis_img {
+  width: 200px;
+}
+
+/*======================================================================================================================
+  width <= 545px;
+========================================================================================================================*/
+
+@media screen and (max-width:845px){
+  #eocis_img {
+    width: 120px;
+  }
+  /* .cpom_img_wrapper {
+    display: none;
+  } */
+  
+} 
