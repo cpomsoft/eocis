@@ -184,8 +184,10 @@
             <?php
                     $index=0;
                     foreach ($basin_names as $thisbasin) {
-                        if ($thisbasin == '---') {
-                        print("<h6 class=\"dropdown-header\">$thisbasin</h6> ");
+                        if ($thisbasin == '---' ) {
+                            print("<h6 class=\"dropdown-header\">$thisbasin</h6> ");
+                        } elseif ($thisbasin == 'Norwegian Sea') {
+                            print("<h6 class=\"dropdown-header\">$thisbasin (no measurements)</h6> ");
                         } else {
                             print "<a ";
                             if ($thisbasin == $basin_name) {
