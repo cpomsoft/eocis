@@ -581,7 +581,7 @@
         </div>
         <p class="filename_txt"><?php echo $productFile?></p>
 
-        <p><br>Near Real Time (NRT) sea ice thickness data at 2-day latency (but at reduced quality) is available from CPOM at 
+        <p><br>Near Real Time (NRT) sea ice thickness data at 2-day latency (preliminary accuracy) is available from CPOM at 
         this <a href="http://www.cpom.ucl.ac.uk/csopr/seaice.php">link</a>
         </p>
 
