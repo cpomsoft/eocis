@@ -83,7 +83,7 @@
 
           <p>EOCIS sea ice thickness and volume netcdf <a href="product_info.php">products</a> are generated monthly from 
           radar altimetry measurements taken from the ESA CryoSAT-2 mission during the winter months (Oct-Apr).
-        You can view or download products here.</p>
+        You can view or <a href="download_info.php">download</a> products here.</p>
         
         <!-- -----------------------------------------------------------------------
               Thickness/Volume Selector Pane
