@@ -82,7 +82,7 @@
           and a significant influence on winter time weather in north west Europe.</p>
 
           <p>EOCIS sea ice thickness and volume netcdf <a href="product_info.php">products</a> are generated monthly from 
-          radar altimetry measurements taken from the ESA CryoSAT-2 mission during the winter months (Oct-Apr).
+          radar altimetry measurements taken from the ESA CryoSAT-2 satellite during the winter months (Oct-Apr).
         You can view or <a href="download_info.php">download</a> products here.</p>
         
         <!-- -----------------------------------------------------------------------
