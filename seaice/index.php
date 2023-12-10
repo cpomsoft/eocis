@@ -83,7 +83,8 @@
 
           <p>EOCIS sea ice thickness and volume netcdf <a href="product_info.php">products</a> are generated monthly by 
           <a href="http://www.cpom.org.uk">CPOM</a> from 
-          radar altimetry measurements taken from the ESA CryoSAT-2 satellite during the winter months (Oct-Apr).
+          radar altimetry measurements taken from the ESA CryoSAT-2 satellite during the 
+          winter months<a href="#winter"><sup>1</sup></a> (Oct-Apr).
         You can view or <a href="download_info.php">download</a> products here.</p>
         
         <!-- -----------------------------------------------------------------------
@@ -641,9 +642,21 @@
 
 
       </div> <!-- col -->
+    </div> <!-- row -->
+    <div class="row">  
+       <h5>Notes</h5>
+        <a name="winter"><p><sup>1</sup>Sea ice freeboard (and derived thickness) is only reliably measured from 
+        satellite radar altimetry during the winter months. During summer, melt ponds can form on the
+         sea ice floes making it difficult for the satellite to differentiate between floes and leads,
+        and hence calculate sea ice freeboard (and subsequently thickness). Measurement during summer
+      months using radar altimetry is an area of active research (<a href="https://doi.org/10.1038/s41586-022-05058-5">Landy et al, 2022</a>) but is not yet operationally processed.</p></a>
     </div>
-  </div>
-</div>
+  </div> <!-- container pt-4 pb-4 -->
+</div> <!-- bg-light -->
+
+
+    <div class="row">  
+
 
 <!-- Plotly timeseries and availability charts drawn by Plotly javascript-->
 <?php
