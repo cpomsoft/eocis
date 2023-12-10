@@ -50,6 +50,9 @@
       <li class="nav-item">
         <a class="nav-link" href="download_info.php">Download Info</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="docs.php">Documents</a>
+      </li>
       
     </ul>
   </div>
