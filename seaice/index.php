@@ -581,7 +581,7 @@
         </div>
         <p class="filename_txt"><?php echo $productFile?></p>
 
-        <p><br>NRT sea ice products are available from CPOM at 
+        <p><br>Near Real Time sea ice sea ice thickness is available from CPOM at 
         this <a href="http://www.cpom.ucl.ac.uk/csopr/seaice.php">link</a>
         </p>
 
