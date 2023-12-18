@@ -175,12 +175,14 @@
     width: 92%;
   }
 
-  #ts_title {
+  .ts_title {
     text-align: center;
     background-color: white;
     margin-top: 5px;
     margin-bottom: 18px;
-    margin-left: 45px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-right: 20px;
     border-color: darkgrey;
     width: 84%;
     height: 30px;
@@ -220,6 +222,7 @@
   .expand-icon-container_ts {
     position: relative;
     top: 5px;
+    margin-left: 10px;
   }
 
   .expand-icon-container {

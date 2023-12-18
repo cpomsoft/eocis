@@ -245,7 +245,7 @@
           <?php } ?>
         </div>
 
-          <div id="ts_title">Time-series of Last 2-years</div>
+          <div class="ts_title">Time-series of Last 2-years</div>
           <p class="text-muted text-center"><small>Mean Sea ice volume grows each Arctic winter season from October to April</small></p>
             <div id="<?php 
             if ($show_volume) {
@@ -293,7 +293,7 @@
         </div>
 
         
-        <div id="ts_title">Full Period (key winter months): <?php print "$first_year:$last_year";?></div>
+        <div class="ts_title">Full Period (key winter months): <?php print "$first_year:$last_year";?></div>
 
           <p class="text-muted text-center"><small>Shows the trend in Arctic sea ice volume since 2010 when CryoSat was launched
             at the start (Oct), middle (Jan), and end (Apr) of the winter season.
@@ -425,7 +425,7 @@
                        }
                     ?>
                   <a href="<?php
-                          print "index.php?basin_number=$basin_number&month=$prev_month&year=$year_to_set&param=$param&expand=$expand_thick_image";
+                          print "index.php?basin_number=$basin_number&month=$prev_month&year=$year_to_set&param=$param&expand_thick_image=$expand_thick_image";
                           ?>">
                       <div class="arrow_button_left" ></div>
                   </a>
@@ -448,7 +448,7 @@
                                 } else {
                                     print "class=\"dropdown-item\"";
                                 }
-                                print " href=\"index.php?basin_number=$basin_number&month=$thismonth&year=$year&param=$param&expand=$expand_thick_image\">$months_str[$index]</a>";
+                                print " href=\"index.php?basin_number=$basin_number&month=$thismonth&year=$year&param=$param&expand_thick_image=$expand_thick_image\">$months_str[$index]</a>";
                             }
                             $index++;
                         }
@@ -469,7 +469,7 @@
                         ?>
 
                       <a href="<?php
-                              print "index.php?basin_number=$basin_number&month=$next_month&year=$year_to_set&param=$param&expand=$expand_thick_image";
+                              print "index.php?basin_number=$basin_number&month=$next_month&year=$year_to_set&param=$param&expand_thick_image=$expand_thick_image";
                               ?>">
                           <div class="arrow_button_right" ></div>
                       </a>
@@ -489,7 +489,7 @@
                       <div class="arrow_button_left_disabled" ></div>
                   <?php } else {  ?>
                   <a href="<?php
-                          print "index.php?basin_number=$basin_number&month=$month&year=$prev_year&param=$param&expand=$expand_thick_image";
+                          print "index.php?basin_number=$basin_number&month=$month&year=$prev_year&param=$param&expand_thick_image=$expand_thick_image";
                           ?>">
                       <div class="arrow_button_left" ></div>
                   </a>
@@ -511,7 +511,7 @@
                               } else {
                                   print "class=\"dropdown-item\"";
                               }
-                              print " href=\"index.php?basin_number=$basin_number&year=$thisyear&param=$param&expand=$expand_thick_image&month=$month\">$thisyear</a>";
+                              print " href=\"index.php?basin_number=$basin_number&year=$thisyear&param=$param&expand_thick_image=$expand_thick_image&month=$month\">$thisyear</a>";
                           }
                           $index++;
                       }
@@ -523,7 +523,7 @@
                           <div class="arrow_button_right_disabled" ></div>
                       <?php } else {  ?>
                       <a href="<?php
-                              print "index.php?basin_number=$basin_number&month=$month&year=$next_year&param=$param&expand=$expand_thick_image";
+                              print "index.php?basin_number=$basin_number&month=$month&year=$next_year&param=$param&expand_thick_image=$expand_thick_image";
                               ?>">
                           <div class="arrow_button_right" ></div>
                       </a>
@@ -551,7 +551,7 @@
                               } else {
                                   print "class=\"dropdown-item\"";
                               }
-                              print " href=\"index.php?basin_number=$basin_number&year=$year&month=$month&param=$thisparam&expand=$expand_thick_image\">$thisparam</a>";
+                              print " href=\"index.php?basin_number=$basin_number&year=$year&month=$month&param=$thisparam&expand_thick_image=$expand_thick_image\">$thisparam</a>";
                           
                           $index++;
                       }
@@ -567,7 +567,7 @@
         
             <div class="button-wrapper"> 
             <p class="latest_button_view_txt">Latest</p>  
-            <a href="index.php?basin_number=<?php echo $basin_number; ?>&year=<?php echo $last_year; ?>&month=<?php echo $last_month; ?>&param=<?php echo $param; ?>&expand=<?php echo $expand_thick_image; ?>"> 
+            <a href="index.php?basin_number=<?php echo $basin_number; ?>&year=<?php echo $last_year; ?>&month=<?php echo $last_month; ?>&param=<?php echo $param; ?>&expand_thick_image=<?php echo $expand_thick_image; ?>"> 
   
               <button type="button" class="btn btn-sm btn-secondary  ct_dropdown_button" aria-haspopup="true" aria-expanded="false">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-end-fill" viewBox="0 0 16 16">
