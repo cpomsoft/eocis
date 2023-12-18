@@ -99,7 +99,7 @@
             </p>
             <p>Example product name: EOCIS-SEAICE-L3C-SITHICK-CS2-5KM-202304-fv1.0.nc </p>
         </div>
-        <image src="images/thickness_map_example.png" style="width: 406px; height:345px; margin-left: 10px;">
+        <image id="sit_image" class="example_image" src="images/thickness_map_example.png" >
 
     </div> <!-- myflex -->
 
@@ -114,15 +114,18 @@
         sub-basins as shown. The sub-basin names related to each time-series are provided in the netcdf file.</p>
         <p class="pt-2">Example product name: EOCIS-SEAICE-TIMESERIES-THICKVOL-CS2-ARCTIC-201011_202310-fv1.0.nc </p>
 </div>
-        <image src="images/arctic_basins.png" style=" margin-left: 10px;" >
+        <image id="sit_image2" class="example_image" src="images/arctic_basins.png" >
 </div>
     
 
     <h3>Sea Ice Thickness Processing References</h3>
     <ul>
     
-<li>Estimating Arctic sea ice thickness and volume using CryoSat-2 radar altimeter data, Tiling.R, Ridout.A, Shepherd.A, ASR, Sept 2018
-Cryosat-2 estimates of Arctic sea ice thickness and volume, Laxon,S et al, GRL, 2013, <a href="https://doi.org/10.1016/j.asr.2017.10.051">doi.org/10.1016/j.asr.2017.10.051</a></li>
+<li>Estimating Arctic sea ice thickness and volume using CryoSat-2 radar altimeter data, 
+  Tiling.R, Ridout.A, Shepherd.A, ASR, Sept 2018</li>
+  <a href="https://doi.org/10.1016/j.asr.2017.10.051">doi.org/10.1016/j.asr.2017.10.051</a></li>
+  <li>Cryosat-2 estimates of Arctic sea ice thickness and volume, Laxon,S et al, GRL, 2013, 
+    <a href=" https://doi.org/10.1002/grl.50193">https://doi.org/10.1002/grl.50193</a></li> 
 </ul>
 <h3>References for Auxillary Data used in Processing Sea Ice Thickness</h3>
 <ul>

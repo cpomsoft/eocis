@@ -485,6 +485,35 @@ left: 0;
 
 .myflex {
   display: flex;
+  flex-direction: row; /* default to side-by-side */
+}
+
+#sit_image {
+  width: 406px; height:345px; 
+}
+#sit_image2 {
+  width: 406px; height:318px; 
+}
+
+/* Responsive design for narrow displays */
+@media (max-width: 940px) {
+  .myflex {
+    flex-direction: column; /* stack image and text vertically */
+  }
+
+  .example_image {
+    width: 100%; /* adjust the width of the image for narrow screens */
+    height: auto; /* maintain aspect ratio */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  #sit_image {
+    /* width: 406px; height:345px; */
+  }
+  #sit_image2 {
+
+  }
 }
 .select_txt {
   margin-left: 20px;
