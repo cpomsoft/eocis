@@ -339,7 +339,7 @@
         <div id="thickness_image_pane" class="
           <?php if ($expand_report_div) { echo "hide"; } ?>
         ">
-        <div id="prod_title">Arctic Monthly Sea Ice <b>Thickness</b></div>
+        <div class="prod_title">Arctic Monthly Sea Ice <b>Thickness</b></div>
          <!-- Expand window icon -->
         <div class="expand-icon-container">
           <?php if (!$expand_thick_image) { ?>
@@ -600,7 +600,7 @@
         class="image-with-shadow
           <?php if ($expand_thick_image) echo " hide " ?> 
         ">
-            <div id="prod_title">Latest Arctic Sea Ice <b>Report</b> (Q1 2023)</div>
+            <div class="prod_title">Latest Arctic Sea Ice <b>Report</b> (Q1 2023)</div>
 
             <!-- Expand window icon -->
             <div class="expand-icon-container">

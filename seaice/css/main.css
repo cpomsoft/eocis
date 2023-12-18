@@ -167,12 +167,13 @@
     height: auto;
   }
 
-  #prod_title {
+  .prod_title {
     text-align: center;
     background-color: white;
     margin-top: 5px;
     border-color: darkgrey;
     width: 92%;
+    padding-right: 15px;
   }
 
   .ts_title {
@@ -227,7 +228,7 @@
 
   .expand-icon-container {
     position: relative;
-    top: -15px;
+    top: -20px;
   }
   
   .expand-icon {
