@@ -65,8 +65,8 @@
         <p>This page provides links to current documentation for the EOCIS Sea Ice products</p>
         <table class="table">
             <tr><th>Document</th><th>Version</th><th>Date</th><th>Format</th></tr>
-            <tr><td><a href="">Quick Start Guide</a></td><td>0.1</td><td>12/2023</td><td>pdf</td></tr>
-            <tr><td><a href="">User Manual</a></td><td>0.1</td><td>12/2023</td><td>pdf</td></tr>
+            <tr><td>Quick Start Guide [link available shortly] </td><td>0.1</td><td>12/2023</td><td>pdf</td></tr>
+            <tr><td>User Manual [link available shortly] </td><td>0.1</td><td>12/2023</td><td>pdf</td></tr>
         </table>
         
     </div>
