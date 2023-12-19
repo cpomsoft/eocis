@@ -90,7 +90,7 @@
         }
 
         // get the parameter value or set default for theme
-        $all_params = array("sea_ice_thickness","sea_ice_thickness_uncertainty","n_thickness_measurements") ;
+        $all_params = array("sea_ice_thickness","sea_ice_thickness_stdev","n_thickness_measurements") ;
         if(isset($_POST['param'])) {
             $param=$_POST['param'];
         } else {
