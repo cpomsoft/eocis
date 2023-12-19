@@ -464,10 +464,10 @@ input:checked + .slider:before {
 .img-overlay-wrap {
 position: relative;
 display: inline-block; /* <= shrinks container to image size */
-transition: transform 150ms ease-in-out;
 border-style: solid;
   border-width: 2px;
   border-color:lavender;
+  margin: auto;
 }
 
 .img-overlay-wrap img { /* <= optional, for responsiveness */
@@ -485,6 +485,17 @@ left: 0;
 
 #myMapDialog {
   background-color:#f6f6f6;
+  width: 70%;
+}
+
+@media (max-width: 940px) {
+#myMapDialog {
+  width: 100%;
+}
+}
+
+#to_center {
+  text-align: center;
 }
 
 .myflex {

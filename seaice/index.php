@@ -698,17 +698,18 @@
 
 <!-- The Dialog -->
 <dialog id="myMapDialog">
+        <div id="to_center" class="container">
         <div class="img-overlay-wrap">
           <image src="images/arctic_map.png">
            <?php require 'arctic_regions.php';?>
         </div>
         <div class="myflex">
-          <!--<button id="closeDialogBtn2">Close</button>-->
           <a href="?basin_number=0&<?php print"show_volume=$show_volume&param=$param&month=$month&year=$year&param=$param"?>">
           <button id="selectAllBtn">Select Whole Arctic</button></a>
           <p class="select_txt">
               Select an Arctic basin in the map to show its time-series</p>
           </div>
+       </div>
 </dialog>
 
 
