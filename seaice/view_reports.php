@@ -72,11 +72,12 @@
           <option value="reports/Q1_2023_ASW.pdf">Q1 2023</option>
       </select>
     </div>
-        <p>
+        <div class="container mt-4">
         <object id="reportObject" data="reports/Q4_2023_ASW.pdf" type="application/pdf" width="100%" height="600">
         <p>It appears you don't have a PDF plugin for this browser.
            You can <a href="" id="pdfDownloadLink">download the PDF file.</a>
         </p>
+</div>
     </div>
   </div>
 </div>

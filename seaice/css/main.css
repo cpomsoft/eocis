@@ -593,6 +593,7 @@ left: 0;
 .report-dropdown {
   width: 50%;
   max-width: 200px;
+  align-self: center; /* Align this item itself */
 }
 
 .report-selection {
@@ -600,6 +601,13 @@ left: 0;
   align-items: center;
   justify-content: flex-start;
 }
+
+.report-selection p {
+  margin-right: 10px;
+  margin-bottom: 0; /* Remove default margin */
+  line-height: 1.5; /* Adjust line height as needed */
+}
+
 
 /*======================================================================================================================
   width <= 545px;
