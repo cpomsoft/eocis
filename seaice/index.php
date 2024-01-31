@@ -625,23 +625,14 @@
             </div>
 
               <?php if (!$expand_report_div) { ?>
-              <p class="report_txt">In the first quarter of 2023, sea ice volume increased from 19.05 thousand km3 
-                in January to 24.01 
-                thousand km3 in March. However, March sea ice volume was the second lowest on record after the 
-                minimum in 2021. This can be attributed to a combination of low sea ice extent (second lowest on 
-                record for March at 13.57 million km2), and below average sea ice thickness, at 1.77 m compared 
-                to a 
-                2011-2023 of 1.79 m. </p><p>In particular, the extent of first-year ice (FYI) and thickness of MYI were 
-                below average throughout the first quarter.
-                Between January and February, the magnitude of sea ice change has not shown a significant trend 
-                since 2011. 
-                Between February and March, volume has shown a decrease in magnitude since 2011, attributable to 
-                decreasing sea ice extent. [<a href="?<?php print "basin_number=$basin_number&month=$month&year=$year&param=$param&expand_report_div=1";?>">See full pdf report..</a>]
+              <p class="report_txt">In the last quarter of 2023, sea ice volume increased from 5.74 thousand km3 in October to 15.4 thousand km3 in December. However, for October, November and December, sea ice volume was below the average for the CryoSat-2 record (2010-2023), particularly in October. This can be attributed to lows in both the extent and thickness of multi-year ice (MYI); in October, the extent of MYI was the lowest on record, at 2.37 million km2 compared to the average of 3.27 million km2. Furthermore, the volume of MYI ice in December was the 4th lowest on record at 4.99 thousand km3.  
+Interestingly, the volume of first-year ice (FYI) in the last quarter of 2023 was high, with November and December having the highest FYI volume since the CryoSat-2 record began, at 6.13 and 10.4 thousand km3 respectively, indicating a recovery since the Spring low FYI volume. This also suggests that the overall below average sea ice volume is being driven by reductions in MYI.
+ [<a href="?<?php print "basin_number=$basin_number&month=$month&year=$year&param=$param&expand_report_div=1";?>">See full pdf report..</a>]
               </p>
               <?php } else {?>
-                <object data="reports/Q1_2023_ASW.pdf" type="application/pdf" width="100%" height="600">
+                <object data="reports/Q4_2023_ASW.pdf" type="application/pdf" width="100%" height="600">
         <p>It appears you don't have a PDF plugin for this browser.
-           You can <a href="reports/Q1_2023_ASW.pdf">download the PDF file.</a>
+           You can <a href="reports/Q4_2023_ASW.pdf">download the PDF file.</a>
         </p>
     </object>
               <?php } ?>
