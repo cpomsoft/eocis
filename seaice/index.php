@@ -627,7 +627,7 @@
               <?php if (!$expand_report_div) { ?>
               <p class="report_txt">In the last quarter of 2023, sea ice volume increased from 5.74 thousand km3 in October to 15.4 thousand km3 in December. However, for October, November and December, sea ice volume was below the average for the CryoSat-2 record (2010-2023), particularly in October. This can be attributed to lows in both the extent and thickness of multi-year ice (MYI); in October, the extent of MYI was the lowest on record, at 2.37 million km2 compared to the average of 3.27 million km2. Furthermore, the volume of MYI ice in December was the 4th lowest on record at 4.99 thousand km3.  
 Interestingly, the volume of first-year ice (FYI) in the last quarter of 2023 was high, with November and December having the highest FYI volume since the CryoSat-2 record began, at 6.13 and 10.4 thousand km3 respectively, indicating a recovery since the Spring low FYI volume. This also suggests that the overall below average sea ice volume is being driven by reductions in MYI.
- [<a href="?<?php print "basin_number=$basin_number&month=$month&year=$year&param=$param&expand_report_div=1";?>">See full pdf report..</a>]
+ [<a href="view_reports.php">See full pdf report and previous reports..</a>]
               </p>
               <?php } else {?>
                 <object data="reports/Q4_2023_ASW.pdf" type="application/pdf" width="100%" height="600">
