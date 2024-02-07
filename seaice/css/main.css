@@ -501,6 +501,7 @@ left: 0;
 .myflex {
   display: flex;
   flex-direction: row; /* default to side-by-side */
+  margin-bottom: 10px;
 }
 
 #sit_image {
