@@ -74,9 +74,8 @@
     <table class="table table-striped table-bordered" width="90%">
       <tr><th>Product</th><th>Source Instrument/Data</th><th>Individual Product Period</th><th>Period of All Products</th><th>Seasons Covered</th><th>Latency</th><th>Type</th><th>Projection</th><th>Format</th></tr>
       <tr><td>Arctic Sea Ice Thickness Grids</td><td>CryoSat-2<br>L1b Baseline-E</td><td>1 Month</td><td>Nov-2010 until present</td><td>Winter(Oct-Apr)</td><td>-2 months</td><td>Grid (5km)</td><td>EPSG:3413</td><td>NetCDF4</td></tr>
-      <tr><td>Arctic Sea Ice Thickness & Volume Time-series</td><td>CryoSat-2<br>L1b Baseline-E</td><td>Nov-2010 until present</td><td>Nov-2010 until present</td><td>Winter(Oct-Apr)</td><td>-2 months</td><td>Monthly Time series</td><td></td><td>NetCDF4</td></tr>
+      <tr><td>Arctic Sea Ice Thickness, Volume and Mass Time-series</td><td>CryoSat-2<br>L1b Baseline-E</td><td>Nov-2010 until present</td><td>Nov-2010 until present</td><td>Winter(Oct-Apr)</td><td>-2 months</td><td>Monthly Time series</td><td></td><td>NetCDF4</td></tr>
     </table>
-    <p>Note that Sea Ice Mass products will be added at a later date in 2024.</p>
     <!-- --------------------------------------------------------------------------------------------- -->
     <h3>Arctic Sea Ice Thickness Grids</h3>
     <div class="myflex">
@@ -104,15 +103,15 @@
     </div> <!-- myflex -->
 
     <!-- --------------------------------------------------------------------------------------------- -->
-    <h3>Arctic Sea Ice Thickness & Volume Time-series</h3>
+    <h3>Arctic Sea Ice Thickness, Volume and Mass Time-series</h3>
     <div class="myflex">
         <div class="prod_txt">
-    <p>This is a netcdf file containing a monthly time-series of mean sea ice thickness and volume. 
+    <p>This is a netcdf file containing a monthly time-series of mean sea ice thickness, volume and mass. 
         The time-series covers the full period of the CryoSat-2 mission (Nov 2010 until present).</p>
     <p> A new product is produced each Arctic winter month (Oct-Apr) containing the updated timeseries.</p>
-    <p>The product contains the timeseries of sea ice thickness and volume for the whole Arctic area as well as for 17 
+    <p>The product contains the timeseries of mean monthly sea ice thickness, volume and mass for the whole Arctic area as well as for 17 
         sub-basins as shown. The sub-basin names related to each time-series are provided in the netcdf file.</p>
-        <p class="pt-2">Example product name: EOCIS-SEAICE-TIMESERIES-THICKVOL-CS2-ARCTIC-201011_202310-fv1.0.nc </p>
+        <p class="pt-2">Example product name: EOCIS-SEAICE-TIMESERIES-THICKVOLMASS-CS2-ARCTIC-201011_202310-fv1.0.nc </p>
 </div>
         <image id="sit_image2" class="example_image" src="images/arctic_basins.png" >
 </div>
