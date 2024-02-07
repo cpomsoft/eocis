@@ -24,12 +24,13 @@ console_log($vol_ts_file);
 
             <?php
 
-                if ($show_volume) {
-                    $plot_y_title="Mean Sea Ice Volume (km3)";
-                    $unpack_param='volume';
-                    $param_name='Volume';
-                    $param_units='km3';
-                } else {
+                // if ($timeseries_type_to_show == 'volume') {
+                //     $plot_y_title="Mean Sea Ice Volume (km3)";
+                //     $unpack_param='volume';
+                //     $param_name='Volume';
+                //     $param_units='km3';
+                // } 
+                if ($timeseries_type_to_show == 'thickness') {
                     $plot_y_title="Mean Sea Ice Thickness (m)";
                     $unpack_param='thickness';
                     $param_name='Thickness';

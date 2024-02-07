@@ -609,6 +609,18 @@ left: 0;
 }
 
 
+.inline_form {
+  display: flex;
+  align-items: center; /* This aligns items vertically in the center, if needed */
+  justify-content: start; /* This aligns items to the start of the container. Use 'space-between' or 'space-around' for different spacing options */
+}
+
+.inline_form div {
+  margin-right: 10px; /* Optional: adds some space between the radio buttons */
+}
+
+
+
 /*======================================================================================================================
   width <= 545px;
 ========================================================================================================================*/

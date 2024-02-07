@@ -25,7 +25,7 @@
           <a href="http://eocis.org"><image id="eocis_img" src="images/cropped-EOCIS-Logo-Final.png" alt="EOCIS logo"  ></a>
          </div>
          <div id="title_div" class="col-md-7  col-sm-9">
-          <h3 class="text-center fs-2">Arctic Sea Ice Thickness and Volume Data</h3>
+          <h3 class="text-center fs-2">Arctic Sea Ice Thickness, Volume and Mass Data</h3>
          </div>
          <div class="col-md-2  d-none d-md-block d-lg-block text-center">
           <div class="cpom_img_wrapper">
@@ -89,7 +89,7 @@
           obstacle to maritime activities, a factor in habitat loss, 
           and a significant influence on winter time weather in north west Europe.</p>
 
-          <p>EOCIS sea ice thickness and volume netcdf <a href="product_info.php">products</a> are generated monthly by 
+          <p>EOCIS sea ice thickness, volume and mass netcdf <a href="product_info.php">products</a> are generated monthly by 
           <a href="http://www.cpom.org.uk">CPOM</a> from 
           radar altimetry measurements taken from the ESA CryoSAT-2 satellite during the 
           winter months<a href="#winter"><sup>1</sup></a> (Oct-Apr).
@@ -139,33 +139,29 @@
               </div> <!-- ts_download_btn_wrapper -->
 
             <!-- ------------------------------------------------------------------------------------------
-              Slide Switch for selecting Thickness/Volume 
+              Radio Buttons for Selecting Thickness/Volume/Mass 
             ------------------------------------------------------------------------------------------ -->
             <div class="switch-container"> <!-- shrinks elements by .9-->
 
-            <form class="inline_form" id="ts_type_form" name="form_show_ts_type" 
-            method="post" action="<?php print "index.php?param=$param&basin_number=$basin_number&year=$year&month=$month&expand_ts1=$expand_ts1&expand_ts2=$expand_ts2";
-                  print "&show_volume="; if ($show_volume) echo "0"; else echo "1";
-            ?>
-            ">
-              <span class="slide_switch_txt"> Mean 
-                          <?php if ($show_volume) {
-                            echo "<span class=\"\">Thickness</span>";
-                          } else {
-                            echo "<b>Thickness</b>";
-                          } ?>
-                        </span>
-                <label id="show_ts_type_switch" for="select_ts_type" class="switch">
-                            <input id="select_ts_type" name="show_volume" type="checkbox" <?php if ($show_volume) print "checked";?> onClick="this.form.submit();">
-                            <span class="slider round"></span>
-                        </label>
-                        <span class="slide_switch_txt">
-                          <?php if ($show_volume) {
-                            echo "<b>Volume</b>";
-                          } else {
-                            echo "<span class=\"\">Volume</span>";
-                          } ?>
-                        </span> Time-series
+            <form class="inline_form" id="ts_type_form" name="form_show_ts_type" method="post" action="<?php print "index.php";?>">
+              <div>
+                <input id="mean_thickness" name="timeseries_type_to_show" type="radio" value="thickness" <?php if ($timeseries_type_to_show == 'thickness') echo 'checked'; ?> onClick="this.form.submit();">
+                <label for="mean_thickness">Mean Thickness</label>
+              </div>
+              <div>
+                <input id="volume" name="timeseries_type_to_show" type="radio" value="volume" <?php if ($timeseries_type_to_show == 'volume') echo 'checked'; ?> onClick="this.form.submit();">
+                <label for="volume">Volume</label>
+              </div>
+              <div>
+                <input id="mass" name="timeseries_type_to_show" type="radio" value="mass" <?php if ($timeseries_type_to_show == 'mass') echo 'checked'; ?> onClick="this.form.submit();">
+                <label for="mass">Mass</label>
+              </div>
+              <input type="hidden" name="param" value="<?php print "$param";?>" >
+              <input type="hidden" name="basin_number" value="<?php print "$basin_number";?>" >
+              <input type="hidden" name="year" value="<?php print "$year";?>" >
+              <input type="hidden" name="month" value="<?php print "$month";?>" >
+              <input type="hidden" name="expand_ts1" value="<?php print "$expand_ts1";?>" >
+              <input type="hidden" name="expand_ts2" value="<?php print "$expand_ts2";?>" >
 
             </form>
             
@@ -251,13 +247,19 @@
         </div>
 
           <div class="ts_title">Time-series of Last 2-years</div>
-          <p class="text-muted text-center"><small>Mean Sea ice volume grows each Arctic winter season from October to April</small></p>
+          
+          <p class="text-muted text-center"><small>
+            <?php if ($timeseries_type_to_show == 'volume') {?>
+              Sea ice volume increases each Arctic winter season from October to April
+            <?php } elseif ($timeseries_type_to_show == 'thickness') {?>
+              Mean Sea ice thickness grows each Arctic winter season from October to April
+            <?php } else {?>
+              Sea ice mass increases each Arctic winter season from October to April
+            <?php }?> 
+          </small></p>
             <div id="<?php 
-            if ($show_volume) {
-              echo "volume"; 
-            } else {
-              echo "thickness";
-            }?>_ts_div" class=" third_height  
+            echo $timeseries_type_to_show;
+            ?>_ts_div" class=" third_height  
             <?php if ($expand_ts1) { echo " expanded_height " ; } ?>
             w3-border-bottom">
                   <!-- Plotly chart will be drawn inside this DIV -->
@@ -300,16 +302,22 @@
         
         <div class="ts_title">Full Period (key winter months): <?php print "$first_year:$last_year";?></div>
 
-          <p class="text-muted text-center"><small>Shows the trend in Arctic sea ice volume since 2010 when CryoSat was launched
+          <p class="text-muted text-center"><small>
+            <?php if ($timeseries_type_to_show == 'volume') {?>
+            Shows the trend in Arctic sea ice volume since 2010 when CryoSat was launched
             at the start (Oct), middle (Jan), and end (Apr) of the winter season.
+            <?php } elseif ($timeseries_type_to_show == 'thickness') {?>
+              Shows the trend in Arctic sea ice thickness since 2010 when CryoSat was launched
+              at the start (Oct), middle (Jan), and end (Apr) of the winter season.
+            <?php } else {?>  
+              Shows the trend in Arctic sea ice mass since 2010 when CryoSat was launched
+              at the start (Oct), middle (Jan), and end (Apr) of the winter season.
+            <?php }?>
           </small></p>
 
             <div id="<?php 
-            if ($show_volume) {
-              echo "volume"; 
-            } else {
-              echo "thickness";
-            }?>_ts2_div" class=" third_height  
+            echo $timeseries_type_to_show;
+            ?>_ts2_div" class=" third_height  
             <?php if ($expand_ts2) { echo " expanded_height " ; } ?>
             w3-border-bottom">
                   <!-- Plotly chart will be drawn inside this DIV -->
@@ -659,12 +667,15 @@ Interestingly, the volume of first-year ice (FYI) in the last quarter of 2023 wa
 
 <!-- Plotly timeseries and availability charts drawn by Plotly javascript-->
 <?php
-     if ($show_volume) {
+     if ($timeseries_type_to_show == 'volume') {
       include 'volume_timeseries.php';
       include 'volume_timeseries2.php';
-     } else {
+     } elseif ($timeseries_type_to_show == 'thickness') {
       include 'thickness_timeseries.php';
       include 'thickness_timeseries2.php';
+     } else {
+      include 'mass_timeseries.php';
+      include 'mass_timeseries2.php';
      }
 ?>
 
@@ -700,7 +711,7 @@ Interestingly, the volume of first-year ice (FYI) in the last quarter of 2023 wa
            <?php require 'arctic_regions.php';?>
         </div>
         <div class="myflex">
-          <a href="?basin_number=0&<?php print"show_volume=$show_volume&param=$param&month=$month&year=$year&param=$param"?>">
+          <a href="?basin_number=0&<?php print"timeseries_type_to_show=$timeseries_type_to_show&param=$param&month=$month&year=$year&param=$param"?>">
           <button id="selectAllBtn">Select Whole Arctic</button></a>
           <p class="select_txt">
               Select an Arctic basin in the map to show its time-series</p>

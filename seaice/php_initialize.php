@@ -22,18 +22,19 @@
         // ----------------------------------------------------------------------------
         $area='arctic';
         
-        $all_show_volume=array(0,1);
+        // select timeseries type to show (volume, mass, thickness)
+        $all_timeseries_type_to_show=array("volume", "mass", "thickness");
 
-        if(isset($_POST['show_volume'])) {
-            $show_volume=$_POST['show_volume'];
+        if(isset($_POST['timeseries_type_to_show'])) {
+            $timeseries_type_to_show=$_POST['timeseries_type_to_show'];
         } else {
-            if(isset($_GET['show_volume'])) {
-                $show_volume=$_GET['show_volume'];
-            } else $show_volume=1;
+            if(isset($_GET['timeseries_type_to_show'])) {
+                $timeseries_type_to_show=$_GET['timeseries_type_to_show'];
+            } else $timeseries_type_to_show="thickness";
         }
 
-         if (!in_array($show_volume,$all_show_volume)) {
-            $show_volume=1;
+         if (!in_array($timeseries_type_to_show,$all_timeseries_type_to_show)) {
+            $timeseries_type_to_show="thickness";
         }
 
         
