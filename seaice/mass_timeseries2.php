@@ -16,7 +16,7 @@ $ts_exists=file_exists($mass_ts_file);
             /*Date,mass,January_mass,October_mass,April_mass
             */
             <?php
-                $plot_y_title="Mean Sea Ice Mass (km3)";
+                $plot_y_title="Sea Ice Mass (km3)";
                 $unpack_param='mass';
                 $param_name='Mass';
                 $param_units='?';

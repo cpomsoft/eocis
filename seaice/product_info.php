@@ -101,7 +101,7 @@
         <image id="sit_image" class="example_image" src="images/thickness_map_example.png" >
 
     </div> <!-- myflex -->
-
+    
     <!-- --------------------------------------------------------------------------------------------- -->
     <h3>Arctic Sea Ice Thickness, Volume and Mass Time-series</h3>
     <div class="myflex">
