@@ -25,10 +25,10 @@ console_log($mass_ts_file);
             <?php
 
                 if ($timeseries_type_to_show == 'mass') {
-                    $plot_y_title="Sea Ice Mass (?)";
+                    $plot_y_title="Sea Ice Mass (Gt)";
                     $unpack_param='mass';
                     $param_name='Mass';
-                    $param_units='?';
+                    $param_units='Gt';
                 } 
                 $plot_name = 'All files';
 
