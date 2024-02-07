@@ -141,11 +141,11 @@
               Radio Buttons for Selecting Thickness/Volume/Mass 
             ------------------------------------------------------------------------------------------ -->
             <div class="switch-container"> <!-- shrinks elements by .9-->
-
             <form class="inline_form" id="ts_type_form" name="form_show_ts_type" method="post" action="<?php print "index.php";?>">
-              <div>
+            <label for="mean_thickness" style="margin-right: 10px;">Mean Monthly </label>
+            <div>
                 <input id="mean_thickness" name="timeseries_type_to_show" type="radio" value="thickness" <?php if ($timeseries_type_to_show == 'thickness') echo 'checked'; ?> onClick="this.form.submit();">
-                <label for="mean_thickness">Mean Thickness</label>
+                <label for="mean_thickness">Thickness</label>
               </div>
               <div>
                 <input id="volume" name="timeseries_type_to_show" type="radio" value="volume" <?php if ($timeseries_type_to_show == 'volume') echo 'checked'; ?> onClick="this.form.submit();">
@@ -161,10 +161,8 @@
               <input type="hidden" name="month" value="<?php print "$month";?>" >
               <input type="hidden" name="expand_ts1" value="<?php print "$expand_ts1";?>" >
               <input type="hidden" name="expand_ts2" value="<?php print "$expand_ts2";?>" >
-
             </form>
-            
-      </div> <!-- switch-container shrinks elements by .9-->
+          </div> <!-- switch container -->
       </div> <!-- thickness_volume_selector_pane_row1 -->
       
       <div id="thickness_volume_selector_pane_row2">
