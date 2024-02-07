@@ -380,7 +380,7 @@ input:checked + .slider:before {
 
 /* The switch container */
 .switch-container {
-  transform: scale(0.9); /* Adjust the scale factor as needed */
+  /* transform: scale(0.9); Adjust the scale factor as needed */
 }
   
 .inline_form {
