@@ -610,7 +610,7 @@
         class="image-with-shadow
           <?php if ($expand_thick_image) echo " hide " ?> 
         ">
-            <div class="prod_title">Latest Arctic Sea Ice <b>Report</b> (Q4 2023)</div>
+            <div class="prod_title">Latest Arctic Sea Ice <b>Report</b> (Q1 2024)</div>
 
             <!-- Expand window icon -->
             <div class="expand-icon-container">
