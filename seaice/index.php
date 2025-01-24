@@ -610,7 +610,7 @@
         class="image-with-shadow
           <?php if ($expand_thick_image) echo " hide " ?> 
         ">
-            <div class="prod_title">Latest Arctic Sea Ice <b>Report</b> (Q1 2024)</div>
+            <div class="prod_title">Latest Arctic Sea Ice <b>Report</b> (Q4 2024)</div>
 
             <!-- Expand window icon -->
             <div class="expand-icon-container">
@@ -630,23 +630,17 @@
             </div>
 
               <?php if (!$expand_report_div) { ?>
-              <p class="report_txt">At the beginning of the first quarter of 2024, sea ice volume
-was above average for the CryoSat-2 record (2010-
-present), at 19.1 thousand km3. This was likely driven by
-an unusually high sea extent, which at 13.2 million km2 was
-one of the highest since 2010, while sea ice thickness for
-January was the fourth lowest since 2010 at 1.4 m.
-In February and March of 2024, sea ice volume was below
-average for the CryoSat-2 record, at 22.1 thousand km3
-and 24.4 thousand km3 respectively. Similarly to the start
-of the year, this can be attributed to below average sea ice
-thickness.
+              <p class="report_txt">At the end of 2024, sea ice volume was below average in October, 
+                November, and December for the CryoSat-2 record (2010 – present). 
+                In particular, at 13.9 thousand km3, December sea ice volume was the lowest on record, 
+                compared to the 2010-2023 average of 15.3 thousand km3. 
+                November sea ice volume was the third lowest on record, and October the second lowest. 
  [<a href="view_reports.php">See full pdf report and previous reports..</a>]
               </p>
               <?php } else {?>
-                <object data="reports/Q4_2023_ASW.pdf" type="application/pdf" width="100%" height="600">
+                <object data="reports/Q4_2024_ASW.pdf" type="application/pdf" width="100%" height="600">
         <p>It appears you don't have a PDF plugin for this browser.
-           You can <a href="reports/Q4_2023_ASW.pdf">download the PDF file.</a>
+           You can <a href="reports/Q4_2024_ASW.pdf">download the PDF file.</a>
         </p>
     </object>
               <?php } ?>
