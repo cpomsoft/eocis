@@ -634,7 +634,8 @@
                 November, and December for the CryoSat-2 record (2010 – present). 
                 In particular, at 13.9 thousand km3, December sea ice volume was the lowest on record, 
                 compared to the 2010-2023 average of 15.3 thousand km3. 
-                November sea ice volume was the third lowest on record, and October the second lowest. 
+                November sea ice volume was the third lowest on record, and October the second lowest.<br>
+                This was driven by a combination of extremely low sea ice extent and below average sea ice thickness. Sea ice extent in December was the lowest on record at 10.6 million km2 compared to the 2010-2023 average of 11.3 million km2. Average sea ice thickness was 1.3 m compared to the 1.4 m average for December.
  [<a href="view_reports.php">See full pdf report and previous reports..</a>]
               </p>
               <?php } else {?>
